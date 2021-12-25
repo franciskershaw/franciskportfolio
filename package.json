@@ -1,0 +1,22 @@
+{
+  "name": "franciskportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio site made using Node, Express, and MongoDB to showcase my work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciskershaw/franciskportfolio.git"
+  },
+  "author": "Francis Kershaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franciskershaw/franciskportfolio/issues"
+  },
+  "homepage": "https://github.com/franciskershaw/franciskportfolio#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
