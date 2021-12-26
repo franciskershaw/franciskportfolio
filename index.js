@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
 const nunjucks = require('nunjucks')
@@ -20,6 +21,9 @@ nunjucks.configure('views', {
 })
 app.set('view engine', 'html')
 
+// Static
+app.use(express.static(path.join(__dirname, 'static')))
+
 // Logging
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
@@ -28,9 +32,13 @@ if (process.env.NODE_ENV === 'development') {
 // Grab port info from config
 const PORT = process.env.PORT || 3000
 
-// HTTP requests
+// Routes
 app.get('/', (req, res) => {
-    res.render('index.html')
+    res.render('index')
+})
+
+app.get('/admin', (req, res) => {
+    res.render('admin')
 })
 
 app.listen(
