@@ -3,6 +3,7 @@
 {% set title = 'Edit Project' %}
 
 {% block content %}
+
   <form action="/projects/{{project._id}}" method="POST">
     <p>{{project._id}}</p>
       <input type="hidden" name="_method" value="PUT">
@@ -14,4 +15,5 @@
       <input type="text" id="liveSite" name="liveSite" value="{{project.liveSite}}">
       <button type="submit">Submit</button>
   </form>
+  
 {% endblock %}
