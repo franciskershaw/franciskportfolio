@@ -4,6 +4,9 @@ const dotenv = require('dotenv')
 const morgan = require('morgan')
 const nunjucks = require('nunjucks')
 const connectDB = require('./config/db')
+const bodyParser = require('body-parser')
+
+const Project = require('./models/Project.js')
 
 // Load config
 dotenv.config({ path: './config/config.env' })
@@ -13,6 +16,10 @@ connectDB()
 
 // Initialize app
 const app = express()
+
+// Body parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
 // Nunjucks
 nunjucks.configure('views', {
@@ -35,6 +42,19 @@ const PORT = process.env.PORT || 3000
 // Routes
 app.get('/', (req, res) => {
     res.render('index')
+})
+
+app.get('/add-project', (req, res) => {
+    res.render('add-project')
+})
+
+app.post('/add-project', async (req, res) => {
+    try {
+        await Project.create(req.body)
+        res.redirect('/')
+    } catch (err) {
+        console.error(err)
+    }
 })
 
 app.get('/admin', (req, res) => {
