@@ -40,26 +40,8 @@ if (process.env.NODE_ENV === 'development') {
 const PORT = process.env.PORT || 3000
 
 // Routes
-app.get('/', (req, res) => {
-    res.render('index')
-})
-
-app.get('/add-project', (req, res) => {
-    res.render('add-project')
-})
-
-app.post('/add-project', async (req, res) => {
-    try {
-        await Project.create(req.body)
-        res.redirect('/')
-    } catch (err) {
-        console.error(err)
-    }
-})
-
-app.get('/admin', (req, res) => {
-    res.render('admin')
-})
+app.use('/', require('./routes/index'))
+app.use('/projects', require('./routes/projects'))
 
 app.listen(
     PORT, 
