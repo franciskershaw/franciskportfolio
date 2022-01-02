@@ -8,9 +8,21 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    {% include "includes/nav.html" %}
-    {% block content %}
-    {% endblock %}
-    {% include "includes/footer.html" %}
+
+    <!-- Navbar -->
+    <header>
+        {% include "includes/nav.html" %}
+    </header>
+
+    <!-- Main page content -->
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        {% include "includes/footer.html" %}
+    </footer>
 </body>
 </html>
