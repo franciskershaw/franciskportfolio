@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const AdministratorSchema = new mongoose.Schema({
-    name: {
+    userName: {
         type: String,
         required: true
     },

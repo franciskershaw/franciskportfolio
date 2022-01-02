@@ -5,10 +5,10 @@
     "ext": "js,html"
   },
   "description": "Portfolio site made using Node, Express, and MongoDB to showcase my work",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index",
-    "dev": "cross-env NODE_ENV=development nodemon index"
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/franciskershaw/franciskportfolio#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",

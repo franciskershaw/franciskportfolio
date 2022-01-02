@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% set title = 'Administrator' %}
+
+{% block content %}
+  <h1>Register page</h1>
+  <form action="/register" method="POST">
+    <label for="userName">Username</label>
+    <input type="text" id="userName" name="userName">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <button type="submit">Go</button>
+  </form>
+{% endblock %}
