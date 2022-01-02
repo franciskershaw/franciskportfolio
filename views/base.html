@@ -9,6 +9,10 @@
 </head>
 <body>
 
+    {% block corejs %}
+        <script src="/js/script.js"></script>
+    {% endblock %}
+
     <!-- Navbar -->
     <header>
         {% include "includes/nav.html" %}
