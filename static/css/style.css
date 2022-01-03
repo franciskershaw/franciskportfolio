@@ -82,6 +82,15 @@ nav a {
     }
 }
 
+@media screen and (max-width: 500px) {
+    nav ul {
+        width: 100%;
+    }
+}
+
+
+/* Animations */
+
 .nav-active {
     transform: translateX(0%);
 }
