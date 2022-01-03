@@ -38,6 +38,7 @@ nav a {
     margin: 5px;
     border-radius: 5px;
     background: black;
+    transition: 0.3s;
 }
 
 #mob-social {
@@ -61,7 +62,7 @@ nav a {
         justify-content: space-around;
         width: 50%;
         transform: translateX(100%);
-        transition: transform 0.5 ease-in;
+        transition: .5s;
     }
 
     nav ul li {
@@ -85,3 +86,25 @@ nav a {
     transform: translateX(0%);
 }
 
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-8px, 0px); 
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-8px, 0px);
+}
