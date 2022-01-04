@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
     margin: 0px;
@@ -7,12 +7,12 @@
 }
 
 body {
-    font-family: 'Dosis', sans-serif;   
+    font-family: 'Lato', sans-serif;   
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     min-height: 8vh;
     background-color: #567BB3;
@@ -20,6 +20,7 @@ nav {
     padding-right: 10px;
     letter-spacing: 2px;
     font-size: 120%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -94,7 +95,7 @@ nav a:hover:before, nav a:hover:after {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: lightgrey;
+        background-color: #567BB3;;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -102,6 +103,7 @@ nav a:hover:before, nav a:hover:after {
         width: 50%;
         transform: translateX(100%);
         transition: .5s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     nav ul li {
