@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* General styles */
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+/* html {
+    overflow-x: hidden;
+} */
+
 body {
-    font-family: 'Lato', sans-serif;   
+    font-family: 'Lato', sans-serif; 
 }
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Navbar */
 
 nav {
     display: flex;
@@ -79,11 +97,10 @@ nav a:hover:before, nav a:hover:after {
     transition: 0.3s;
 }
 
-
-
 #mob-social {
     display: none;
 }
+
 
 @media screen and (max-width: 768px) {
     body {
@@ -129,6 +146,26 @@ nav a:hover:before, nav a:hover:after {
     }
 }
 
+/* Homepage */
+
+.home-container {
+    flex-flow: column nowrap;
+}
+
+.hero-cta { grid-area: hero-cta; }
+.hero-image { grid-area: hero-image; }
+
+@media screen and (min-wdith: 768px) {
+    .hero {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "hero-cta hero-image";
+    }
+}
 
 /* Animations */
 

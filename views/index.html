@@ -3,8 +3,32 @@
 {% set title = 'Home' %}
 
 {% block content %}
-  <section>Intro/Hero</section>
-  <section>About</section>
-  <section>Projects</section>
-  <section>Contact</section>
+  <div class="flex-container home-container">
+    <section class="hero grid-container">
+      <div class="hero-cta">
+        <h1>Hi there</h1>
+        <p>My name is Francis. I develop websites, produce music, and generally spend time geeking out.</p>
+        <div>
+          <button>Get in touch</button>
+          <button>My work</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>This is some smaller text that summarises nicely what I'm all about, maybe with a bit of humour too so that people know I'm not a total square.</p>
+    </section>
+
+    <section class="projects">
+      <h2>My Recent Work</h2>
+      <div>
+        Loop over projects
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Get in touch!</h2>
+    </section>
+  </div>
 {% endblock %}
