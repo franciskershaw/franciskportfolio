@@ -3,31 +3,34 @@
 {% set title = 'Home' %}
 
 {% block content %}
-  <div class="flex-container home-container">
-    <section class="hero grid-container">
+  <div class="home-container">
+
+    <section class="hero-section">
       <div class="hero-cta">
         <h1>Hi there</h1>
-        <p>My name is Francis. I develop websites, produce music, and generally spend time geeking out.</p>
-        <div>
-          <button>Get in touch</button>
-          <button>My work</button>
+        <div class="hero-cta-tagline">
+          <p>My name is Francis. I develop websites, produce music, and generally spend time geeking out.</p>
+        </div>
+        <div class="hero-cta-btns flex-container">
+          <button class="cta-btn">Get in touch</button>
+          <button class="cta-btn">My work</button>
         </div>
       </div>
     </section>
 
-    <section class="about">
+    <section class="about-section">
       <h2>About Me</h2>
-      <p>This is some smaller text that summarises nicely what I'm all about, maybe with a bit of humour too so that people know I'm not a total square.</p>
+      <!-- <p>This is some smaller text that summarises nicely what I'm all about, maybe with a bit of humour too so that people know I'm not a total square.</p> -->
     </section>
 
-    <section class="projects">
+    <section class="projects-section">
       <h2>My Recent Work</h2>
       <div>
         Loop over projects
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact-section">
       <h2>Get in touch!</h2>
     </section>
   </div>

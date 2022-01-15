@@ -18,12 +18,10 @@ body {
 
 .flex-container {
     display: flex;
-    gap: 2rem;
 }
 
 .grid-container {
     display: grid;
-    gap: 1.5rem;
 }
 
 /* Navbar */
@@ -32,8 +30,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
-    background-color: #567BB3;
+    min-height: 6vh;
+    background-color: #288dea;
     padding-left: 10px;
     padding-right: 10px;
     letter-spacing: 2px;
@@ -104,15 +102,15 @@ nav a:hover:before, nav a:hover:after {
 
 @media screen and (max-width: 768px) {
     body {
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     nav ul {
         position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: #567BB3;;
+        right: 0;
+        height: 94vh;
+        top: 6vh;
+        background-color: #567BB3;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -148,23 +146,42 @@ nav a:hover:before, nav a:hover:after {
 
 /* Homepage */
 
-.home-container {
-    flex-flow: column nowrap;
+.hero-section {
+    margin-bottom: 20px;
+    background: url('../images/hero-image.jpeg') no-repeat center center;
+    background-size: cover;
 }
 
-.hero-cta { grid-area: hero-cta; }
-.hero-image { grid-area: hero-image; }
+.hero-cta h1 {
+    font-size: 2.25rem;
+    margin-bottom: 5px;
+}
 
-@media screen and (min-wdith: 768px) {
-    .hero {
-        display: grid; 
-        grid-auto-columns: 1fr; 
-        grid-template-columns: repeat(2, 1fr); 
-        grid-template-rows: 1fr; 
-        gap: 0px 0px; 
-        grid-template-areas: 
-          "hero-cta hero-image";
-    }
+.hero-cta p {
+    margin-bottom: 15px;
+}
+
+.hero-cta {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.hero-cta-btns {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button.cta-btn {
+    font-size: 1rem;
+    background-color: #288dea;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 2rem;
+    text-align: center;
+    width: 45%;
 }
 
 /* Animations */
