@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --main-blue: #288dea;
+}
 
 /* General styles */
 
@@ -14,6 +17,8 @@
 
 body {
     font-family: 'Lato', sans-serif; 
+    flex-direction: column;
+    height: 100vh;
 }
 
 .flex-container {
@@ -31,7 +36,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 6vh;
-    background-color: #288dea;
+    background-color: var(--main-blue);
     padding-left: 10px;
     padding-right: 10px;
     letter-spacing: 2px;
@@ -110,7 +115,7 @@ nav a:hover:before, nav a:hover:after {
         right: 0;
         height: 94vh;
         top: 6vh;
-        background-color: #567BB3;
+        background-color: var(--main-blue);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -144,27 +149,49 @@ nav a:hover:before, nav a:hover:after {
     }
 }
 
+/* Footer */
+
+footer {
+    background: var(--main-blue);
+    margin-top: auto;
+    height: 100px;
+}
+
+.footer-container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container div {
+    justify-self: center;
+}
+
+.footer-container a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Homepage */
 
 .hero-section {
-    margin-bottom: 20px;
-    background: url('../images/hero-image.jpeg') no-repeat center center;
-    background-size: cover;
+    border: 3px solid #e4677d;
 }
 
 .hero-cta h1 {
-    font-size: 2.25rem;
-    margin-bottom: 5px;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
 }
 
 .hero-cta p {
     margin-bottom: 15px;
+    font-size: 1.35rem;
 }
 
 .hero-cta {
-    padding-top: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 60px 40px 30px 30px;
 }
 
 .hero-cta-btns {
@@ -182,6 +209,15 @@ button.cta-btn {
     border-radius: 2rem;
     text-align: center;
     width: 45%;
+}
+
+.about-section {
+    padding: 20px;
+    border: 2px solid skyblue;
+}
+
+.about-section h2 {
+    font-size: 2rem;
 }
 
 /* Animations */
