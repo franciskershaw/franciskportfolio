@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 
-const Administrator = require('../models/Administrator')
+const User = require('../models/User')
 
 // @desc    Temporary register page for hashing passwords
 // @route   GET /auth/register

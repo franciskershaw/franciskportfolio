@@ -149,6 +149,18 @@ nav a:hover:before, nav a:hover:after {
     }
 }
 
+/* Add and Edit pages */
+
+.form-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    flex-direction: column;
+}
+
 /* Footer */
 
 footer {
