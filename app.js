@@ -4,7 +4,6 @@ if (process.env.NODE_ENV === 'development') {
 
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 const connectDB = require('./config/db');
