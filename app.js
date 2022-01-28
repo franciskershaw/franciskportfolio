@@ -1,14 +1,17 @@
+if (process.env.NODE_ENV === 'development') {
+    require('dotenv').config({ path: './config/config.env' });
+}
+
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 const connectDB = require('./config/db');
-const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
 // Load config
-dotenv.config({ path: './config/config.env' });
+// dotenv.config({ path: './config/config.env' });
 
 // Connect to Mongo database
 connectDB();
@@ -21,15 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Method override
-app.use(methodOverride (function (req, res) {
-    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-        // look in urlencoded POST bodies and delete it
-        let method = req.body._method;
-        delete req.body._method;
-        return method;
-    }
-  })
-);
+app.use(methodOverride('_method'));
 
 // Nunjucks
 nunjucks.configure('views', {
@@ -51,6 +46,7 @@ const PORT = process.env.PORT || 3000;
 
 // Routes
 app.use('/', require('./routes/index'));
+app.use('/auth', require('./routes/auth'));
 app.use('/projects', require('./routes/projects'));
 
 app.listen(
