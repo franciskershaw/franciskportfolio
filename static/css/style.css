@@ -11,10 +11,6 @@
     box-sizing: border-box;
 }
 
-/* html {
-    overflow-x: hidden;
-} */
-
 body {
     font-family: 'Lato', sans-serif; 
     flex-direction: column;
@@ -230,6 +226,15 @@ button.cta-btn {
 
 .about-section h2 {
     font-size: 2rem;
+}
+
+/* Flash messages */
+
+.success-flash {
+    border: 1px solid;
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }
 
 /* Animations */
