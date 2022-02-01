@@ -4,9 +4,9 @@
 
 {% block content %}
   <h1>Register page</h1>
-  <form action="/register" method="POST">
-    <label for="userName">Username</label>
-    <input type="text" id="userName" name="userName">
+  <form action="/auth/register" method="POST">
+    <label for="username">Username</label>
+    <input type="text" id="userName" name="username">
     <label for="password">Password</label>
     <input type="password" name="password" id="password">
     <button type="submit">Go</button>

@@ -10,9 +10,11 @@ const connectDB = require('./config/db');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const Admin = require('./models/Admin');
 
-// Load config
-// dotenv.config({ path: './config/config.env' });
+const MongoDBStore = require("connect-mongo");
 
 // Connect to Mongo database
 connectDB();
@@ -44,18 +46,18 @@ if (process.env.NODE_ENV === 'development') {
 
 // Storing session data in MongoDb
 const secret = process.env.SESSION_SECRET;
-// const store = new MongoDBStore({
-//     mongoUrl: process.env.MONGO_URI,
-//     secret: secret,
-//     touchAfter: 24 * 60 * 60
-// });
-// store.on("error", function (e) {
-//     console.log("SESSION STORE ERROR", e)
-// })
+const store = new MongoDBStore({
+    mongoUrl: process.env.MONGO_URI,
+    secret: secret,
+    touchAfter: 24 * 60 * 60
+});
+store.on("error", function (e) {
+    console.log("SESSION STORE ERROR", e)
+})
 
 // Sessions
 const sessionConfig = {
-    // store,
+    store,
     secret: secret,
     resave: false,
     saveUninitialized: true,
@@ -72,11 +74,22 @@ app.use(session(sessionConfig))
 // Flash
 app.use(flash());
 
+// Configure passport and local strategy
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(Admin.authenticate()));
+
+passport.serializeUser(Admin.serializeUser());
+passport.deserializeUser(Admin.deserializeUser());
+
 // Global context - all templates have access to these
 app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
     // Flash
     res.locals.success = req.flash('success');
     // res.locals.error = req.flash('error');
+    console.log(res.locals.success);
+    console.log(res.locals.currentUser);
     next();
 })
 
