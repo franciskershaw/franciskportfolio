@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Storing session data in MongoDb
-const secret = process.env.SESSION_SECRET;
+const secret = process.env.SESSION_SECRET || 'thishouldbeabettersecret!';
 const store = new MongoDBStore({
     mongoUrl: process.env.MONGO_URI,
     secret: secret,
@@ -84,17 +84,13 @@ passport.deserializeUser(Admin.deserializeUser());
 
 // Global context - all templates have access to these
 app.use((req, res, next) => {
-    res.locals.currentUser = req.user;
+    res.locals.admin = req.user;
     // Flash
     res.locals.success = req.flash('success');
     // res.locals.error = req.flash('error');
-    console.log(res.locals.success);
-    console.log(res.locals.currentUser);
+    console.log(res.locals.admin);
     next();
 })
-
-// Grab port info from config
-const PORT = process.env.PORT || 3000;
 
 // Routes
 app.use('/', require('./routes/index'));
@@ -102,6 +98,9 @@ app.use('/auth', require('./routes/auth'));
 app.use('/projects', require('./routes/projects'));
 app.use('/skills', require('./routes/skills'));
 
+
+// Grab port info from config
+const PORT = process.env.PORT || 3000;
 app.listen(
     PORT, 
     console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)

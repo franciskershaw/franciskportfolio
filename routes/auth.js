@@ -39,11 +39,10 @@ router.get('/login', (req, res) => {
 
 // @desc    log a user in
 // @route   POST /auth/login
-router.post('/login', (req, res) => {
-    req.flash('success', 'You have logged in');
+router.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), (req, res) => {
+    req.flash('success', 'You did it!');
     res.redirect('/');
-},
-passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }));
+})
 
 router.get('/logout', (req, res) => {
     req.logout();
