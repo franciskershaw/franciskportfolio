@@ -3,6 +3,13 @@ const router = express.Router()
 
 const Project = require('../models/Project')
 
+// @desc    Render project management page
+// @route   GET /projects
+
+router.get('/', (req, res) => {
+    res.render('projects');
+})
+
 // @desc    Render form to add new project
 // @route   GET /projects/add
 router.get('/add', (req, res) => {

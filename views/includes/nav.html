@@ -1,6 +1,9 @@
 <nav id="navbar">
     <div class="logo">
         <a href="#">FrancisK</a>
+        {% if admin %}
+            <a href="/auth/logout">Logout</a>
+        {% endif %}
     </div>
     <ul class="nav-links">
         <li>

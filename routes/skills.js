@@ -3,6 +3,12 @@ const router = express.Router();
 
 const Skill = require('../models/Skill');
 
+// @desc    Render skills management page
+// @route   GET /skills
+router.get('/', (req, res) => {
+    res.render('skills');
+})
+
 // @desc    Render form for adding skills
 // @route   GET /skills/add
 router.get('/add', (req, res) => {

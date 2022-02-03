@@ -13,14 +13,14 @@
     <!-- Navbar -->
     <header>
         {% include "includes/nav.html" %}
+        {% if admin %}
+            {% include "includes/admin-nav.html" %}
+        {% endif %}
     </header>
 
     <!-- Main page content -->
     <main>
         {% include "includes/flash.html" %}
-        {% if admin %}
-        <div>You have admin priviledges</div>
-        {% endif %}
         {% block content %}
         {% endblock %}
     </main>
