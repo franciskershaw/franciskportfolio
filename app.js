@@ -84,11 +84,11 @@ passport.deserializeUser(Admin.deserializeUser());
 
 // Global context - all templates have access to these
 app.use((req, res, next) => {
+    // Logged in user
     res.locals.admin = req.user;
     // Flash
     res.locals.success = req.flash('success');
     // res.locals.error = req.flash('error');
-    console.log(res.locals.admin);
     next();
 })
 
@@ -101,6 +101,8 @@ app.use('/skills', require('./routes/skills'));
 
 // Grab port info from config
 const PORT = process.env.PORT || 3000;
+
+// Listen for app
 app.listen(
     PORT, 
     console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)

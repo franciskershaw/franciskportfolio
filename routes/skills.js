@@ -18,4 +18,10 @@ router.post('/add', async (req, res) => {
     res.redirect('/');
 })
 
+// @desc    Render edit form for skills
+// @route   GET /skills/:id/edit
+router.get('/:id/edit', (req, res) => {
+    res.send('Attempting to edit')
+})
+
 module.exports = router

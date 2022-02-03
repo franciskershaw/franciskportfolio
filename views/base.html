@@ -19,7 +19,7 @@
     <main>
         {% include "includes/flash.html" %}
         {% if admin %}
-        <div>You are {{ admin.username }}</div>
+        <div>You have admin priviledges</div>
         {% endif %}
         {% block content %}
         {% endblock %}
