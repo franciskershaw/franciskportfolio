@@ -5,8 +5,9 @@ const Skill = require('../models/Skill');
 
 // @desc    Render skills management page
 // @route   GET /skills
-router.get('/', (req, res) => {
-    res.render('skills');
+router.get('/', async (req, res) => {
+    const skills = await Skill.find({});
+    res.render('skills', { skills });
 })
 
 // @desc    Render form for adding skills

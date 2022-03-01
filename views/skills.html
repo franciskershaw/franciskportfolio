@@ -8,9 +8,19 @@
     <section>
         <h1>Skills Management</h1>
     </section>
+    <a href="/skills/add">Add new skill</a>
+    <br>
     <section>
+        <br>
         <h2>Skills:</h2>
-        <p>Loop over skills here in a list, with buttons to edit or delete</p>
+        {% for skill in skills %}
+            <div>
+                <p>{{ skill.name }}</p>
+                <a href="">Edit</a>
+                <form style="display: inline" action=""><button>Delete</button></form>
+            </div>
+            <br>
+        {% endfor %}
     </section>
 </div>
 

@@ -100,6 +100,11 @@ nav a:hover:before, nav a:hover:after {
     display: none;
 }
 
+nav#admin-nav {
+    min-height: 4vh;
+    font-size: 100%;
+}
+
 
 @media screen and (max-width: 768px) {
     body {
