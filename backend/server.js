@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv').config()
 const path = require('path');
 const connectDB = require('./config/db');
+const colors = require('colors');
 // Grab port info from config
 const PORT = process.env.PORT || 5000;
 
@@ -16,10 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Routes
-// app.use('/', require('./routes/index'));
-// app.use('/auth', require('./routes/auth'));
-// app.use('/projects', require('./routes/projects'));
-// app.use('/skills', require('./routes/skills'));
+app.use('/api/users', require('./routes/userRoutes'))
 
 // Serve Frontend
 if (process.env.NODE_ENV === 'production') {
