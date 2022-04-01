@@ -7,8 +7,10 @@
   "description": "Portfolio site made using Node, Express, and MongoDB to showcase my work",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server",
-    "server": "nodemon backend/server.js"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -22,21 +24,15 @@
   "homepage": "https://github.com/franciskershaw/franciskportfolio#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "connect-flash": "^0.1.1",
+    "colors": "^1.4.0",
     "connect-mongo": "^4.6.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
-    "express-session": "^1.17.2",
-    "method-override": "^3.0.0",
-    "mongoose": "^6.1.3",
-    "morgan": "^1.10.0",
-    "nunjucks": "^3.2.3",
-    "passport": "^0.5.2",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^6.1.0"
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.3"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "nodemon": "^2.0.15"
   }
 }
