@@ -5,10 +5,10 @@
     "ext": "js,html"
   },
   "description": "Portfolio site made using Node, Express, and MongoDB to showcase my work",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node app",
-    "dev": "cross-env NODE_ENV=development nodemon app"
+    "start": "cross-env NODE_ENV=production node server",
+    "server": "nodemon backend/server.js"
   },
   "repository": {
     "type": "git",

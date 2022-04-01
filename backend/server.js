@@ -2,6 +2,7 @@ if (process.env.NODE_ENV === 'development') {
     require('dotenv').config({ path: './config/config.env' });
 }
 
+const dotenv = require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
@@ -45,31 +46,31 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Storing session data in MongoDb
-const secret = process.env.SESSION_SECRET || 'thishouldbeabettersecret!';
-const store = new MongoDBStore({
-    mongoUrl: process.env.MONGO_URI,
-    secret: secret,
-    touchAfter: 24 * 60 * 60
-});
-store.on("error", function (e) {
-    console.log("SESSION STORE ERROR", e)
-})
+// const secret = process.env.SESSION_SECRET || 'thishouldbeabettersecret!';
+// const store = new MongoDBStore({
+//     mongoUrl: process.env.MONGO_URI,
+//     secret: secret,
+//     touchAfter: 24 * 60 * 60
+// });
+// store.on("error", function (e) {
+//     console.log("SESSION STORE ERROR", e)
+// })
 
 // Sessions
-const sessionConfig = {
-    store,
-    secret: secret,
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-        name: 'session',
-        httpOnly: true,
-        // secure: true,
-        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-        maxAge: 1000 * 60 * 60 * 7
-    }
-}
-app.use(session(sessionConfig))
+// const sessionConfig = {
+//     store,
+//     secret: secret,
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//         name: 'session',
+//         httpOnly: true,
+//         // secure: true,
+//         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+//         maxAge: 1000 * 60 * 60 * 7
+//     }
+// }
+// app.use(session(sessionConfig))
 
 // Flash
 app.use(flash());
@@ -100,7 +101,7 @@ app.use('/skills', require('./routes/skills'));
 
 
 // Grab port info from config
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Listen for app
 app.listen(
