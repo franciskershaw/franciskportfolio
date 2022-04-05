@@ -2,5 +2,34 @@
 @import '../../styles/abstracts/mixins';
 
 .hero {
-	background: lightblue;
+	display: flex;
+	
+	&Left {
+		flex: 0.5;
+		overflow: hidden;
+
+		.imgContainer {
+			width: 100%;
+			height: 55%;
+			border: 1px solid red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			// background: red;
+			// float: right;
+			overflow: hidden;
+
+			img {
+				// width: 100%;
+				// border-radius: 50%;
+				// height: 100%;
+				
+			}
+		}
+		
+	}
+	&Right {
+		flex: 0.5;
+		
+	}
 }
