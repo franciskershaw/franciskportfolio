@@ -9,6 +9,7 @@
   position: fixed;
   top: 0;
   z-index: 100;
+  transition: all 1s ease;
 
   &Wrapper {
     padding: 10px 30px;
@@ -24,8 +25,9 @@
         font-size: 4rem;
         font-weight: 700;
         text-decoration: none;
-        color: inherit;
+        color: $primaryColor;
         margin-right: 3.5rem;
+        transition: all 1s ease;
       }
 
       .iconContainer {
