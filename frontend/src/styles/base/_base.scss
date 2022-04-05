@@ -1,41 +1,40 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-	overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  overflow-x: hidden;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	box-sizing: border-box;
-	
+  box-sizing: border-box;
 }
 
 .page-container {
-	height: 100vh;
+  height: 100vh;
 
-	.page-content {
-		width: 100%;
-		height: calc(100vh - $headerHeight);
-		position: relative;
-		top: $headerHeight;
-		scroll-behavior: smooth;
-		scroll-snap-type: y mandatory;
-		scrollbar-width: none; // firefox
-		&::-webkit-scrollbar { // Chrome, safari, etc.
-			display: none;
-		}
+  .page-content {
+    width: 100%;
+    height: calc(100vh - $headerHeight);
+    position: relative;
+    top: $headerHeight;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; // firefox
+    &::-webkit-scrollbar {
+      // Chrome, safari, etc.
+      display: none;
+    }
 
-		> * {
-			width: 100vw;
-			height: calc(100vh - $headerHeight);
-			scroll-snap-align: start;
-		}
-	}
+    > * {
+      width: 100vw;
+      height: calc(100vh - $headerHeight);
+      scroll-snap-align: start;
+    }
+  }
 }
-
