@@ -1,0 +1,29 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.header {
+  width: 100%;
+  height: $headerHeight;
+  background-color: $colorWhite;
+  color: $primaryColor;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  &Wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &Left {
+     
+     .logo {
+      font-size: 4rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: inherit;
+     } 
+    }
+  }
+}

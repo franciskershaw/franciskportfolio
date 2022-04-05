@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
+	overflow-x: hidden;
 }
 
 html {
@@ -12,4 +13,29 @@ html {
 
 body {
 	box-sizing: border-box;
+	
 }
+
+.page-container {
+	height: 100vh;
+
+	.page-content {
+		width: 100%;
+		height: calc(100vh - $headerHeight);
+		position: relative;
+		top: $headerHeight;
+		scroll-behavior: smooth;
+		scroll-snap-type: y mandatory;
+		scrollbar-width: none; // firefox
+		&::-webkit-scrollbar { // Chrome, safari, etc.
+			display: none;
+		}
+
+		> * {
+			width: 100vw;
+			height: calc(100vh - $headerHeight);
+			scroll-snap-align: start;
+		}
+	}
+}
+
