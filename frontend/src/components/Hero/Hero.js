@@ -4,11 +4,11 @@ const Hero = () => {
 	return (
 		<div id='hero' className={classes.hero}>
 			<div className={classes.heroLeft}>
-				<div className={classes.imgContainer}>
-					<img src="assets/hero-image.jpeg" alt="" />
-				</div>
+				This is the left side of the hero section
 			</div>
-			<div className={classes.heroRight}></div>
+			<div className={classes.heroRight}>
+				This is the right side of the hero section
+			</div>
 		</div>
 	)
 }
