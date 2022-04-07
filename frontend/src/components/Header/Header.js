@@ -4,9 +4,9 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const Header = (props) => {
   return (
     <header
-      className={`header ${props.menuOpen && 'headerActive'}`}>
-      <div className='headerWrapper'>
-        <div className='headerWrapperLeft'>
+      className={`header ${props.menuOpen && 'header--active'}`}>
+      <div className='header__wrapper'>
+        <div className='header__wrapper--left'>
           <a className='logo' href="#hero">
             {`<FrancisKershaw />`}
           </a>
@@ -15,7 +15,7 @@ const Header = (props) => {
             <FontAwesomeIcon className='socialIcon' icon={faGithub} />
           </div>
         </div>
-        <div className='headerWrapperRight'>
+        <div className='header__wrapper--right'>
           <div
             onClick={() => props.setMenuOpen(!props.menuOpen)}
             className='hamburger'>

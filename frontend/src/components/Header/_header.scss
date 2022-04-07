@@ -12,14 +12,14 @@
   transition: all 1s ease;
   display: flex;
 
-  &Wrapper {
+  &__wrapper {
     width: 100%;
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    &Left {
+    &--left {
       display: flex;
       align-items: center;
 
@@ -43,7 +43,7 @@
       }
     }
 
-    &Right {
+    &--right {
       .hamburger {
         width: 3.2rem;
         height: 2.5rem;
@@ -63,7 +63,7 @@
     }
   }
 
-  &Active {
+  &--active {
     background-color: $primaryColor;
     color: $colorWhite;
     .logo {

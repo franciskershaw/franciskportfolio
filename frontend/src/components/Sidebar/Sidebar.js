@@ -1,6 +1,6 @@
 const Sidebar = (props) => {
 	return (
-		<div className={`sidebar ${props.menuOpen && 'sidebarActive'}`}>
+		<div className={`sidebar ${props.menuOpen && 'sidebar--active'}`}>
 			<ul>
 				<li onClick={() => props.setMenuOpen(false)}>
 					<a href="#hero">Home</a>
