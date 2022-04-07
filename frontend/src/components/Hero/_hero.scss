@@ -3,14 +3,8 @@
 
 .hero {
 	display: flex;
-	
-	&Left {
-		flex: 0.5;
-		overflow: hidden;
-	}
-	
-	&Right {
-		flex: 0.5;
-		
-	}
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }

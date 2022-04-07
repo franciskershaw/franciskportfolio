@@ -1,8 +1,6 @@
-import classes from './Projects.module.scss';
-
 const Projects = () => {
 	return (
-		<div id='projects' className={classes.projects}>
+		<div id='projects' className='projects'>
 			I'm the Projects section
 		</div>
 	)

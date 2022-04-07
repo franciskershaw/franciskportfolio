@@ -1,8 +1,6 @@
-import classes from './Sidebar.module.scss';
-
 const Sidebar = (props) => {
 	return (
-		<div className={`${classes.sidebar} ${props.menuOpen && classes.sidebarActive}`}>
+		<div className={`sidebar ${props.menuOpen && 'sidebarActive'}`}>
 			<ul>
 				<li onClick={() => props.setMenuOpen(false)}>
 					<a href="#hero">Home</a>

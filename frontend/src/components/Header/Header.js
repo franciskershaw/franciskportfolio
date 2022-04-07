@@ -1,28 +1,27 @@
-import classes from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Header = (props) => {
   return (
     <header
-      className={`${classes.header} ${props.menuOpen && classes.headerActive}`}>
-      <div className={classes.headerWrapper}>
-        <div className={classes.headerWrapperLeft}>
-          <a className={classes.logo} href="#hero">
-            {`<FrancisKershawDev />`}
+      className={`header ${props.menuOpen && 'headerActive'}`}>
+      <div className='headerWrapper'>
+        <div className='headerWrapperLeft'>
+          <a className='logo' href="#hero">
+            {`<FrancisKershaw />`}
           </a>
-          <div className={classes.iconContainer}>
-            <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} />
-            <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} />
+          <div className='iconContainer'>
+            <FontAwesomeIcon className='socialIcon' icon={faLinkedin} />
+            <FontAwesomeIcon className='socialIcon' icon={faGithub} />
           </div>
         </div>
-        <div className={classes.headerWrapperRight}>
+        <div className='headerWrapperRight'>
           <div
             onClick={() => props.setMenuOpen(!props.menuOpen)}
-            className={classes.hamburger}>
-            <span className={classes.line1}></span>
-            <span className={classes.line2}></span>
-            <span className={classes.line3}></span>
+            className='hamburger'>
+            <span className='line1'></span>
+            <span className='line2'></span>
+            <span className='line3'></span>
           </div>
         </div>
       </div>

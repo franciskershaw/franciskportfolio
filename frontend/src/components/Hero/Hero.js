@@ -1,16 +1,20 @@
-import classes from './Hero.module.scss';
-
 const Hero = () => {
-	return (
-		<div id='hero' className={classes.hero}>
-			<div className={classes.heroLeft}>
-				This is the left side of the hero section
+  return (
+    <div id="hero" className='hero'>
+      <div className='heroHeading'>
+        <h1>Hi there, I'm Francis.</h1>
+        <p>
+          I'm a frontend developer, specialising in React but with experience
+          all over the stack.
+        </p>
+      </div>
+			<div className='heroCta'>
+				{/* Button components here */}
+				<button className='btn'>Get in touch</button>
+				<button className='btn'>My work</button>
 			</div>
-			<div className={classes.heroRight}>
-				This is the right side of the hero section
-			</div>
-		</div>
-	)
-}
+    </div>
+  );
+};
 
 export default Hero;

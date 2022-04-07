@@ -7,7 +7,13 @@
 @import 'styles/base/typography';
 
 // Components
+@import 'styles/components/button';
 
 // Layout
+@import 'components/Header/header';
+@import 'components/Sidebar/sidebar';
 
 // Pages
+@import 'components/Contact/contact';
+@import 'components/Hero/hero';
+@import 'components/Projects/projects';

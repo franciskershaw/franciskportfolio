@@ -1,8 +1,6 @@
-import classes from './Contact.module.scss';
-
 const Contact = () => {
 	return (
-		<div id='contact' className={classes.contact}>
+		<div id='contact' className='contact'>
 			This is the contact section
 		</div>
 	)
