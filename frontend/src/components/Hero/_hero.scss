@@ -1,25 +1,25 @@
-@import '../../styles/abstracts/variables';
-@import '../../styles/abstracts/mixins';
-
 .hero {
   display: flex;
   align-items: center;
   flex-direction: column;
+	justify-content: space-around;
 
   &__heading {
-		@include trainingwheels;
-		
     padding-left: 3rem;
     padding-right: 3rem;
 
     h1 {
       font-size: 4rem;
     }
+		p {
+			font-size: 2rem;
+		}
   }
 
 	&__cta {
-		@include trainingwheels;
-		width: 100%;
-		text-align: center;	
+		height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	}
 }

@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <div id="hero" className='hero'>
       <div className='hero__heading'>
-        <h1>Hi there, I'm Francis.</h1>
+        <h1 className='mb-medium'>Hi there, I'm Francis.</h1>
         <p>
           I'm a frontend developer, specialising in React but with experience
           all over the stack.
@@ -10,8 +10,8 @@ const Hero = () => {
       </div>
 			<div className='hero__cta'>
 				{/* Button components here */}
-				<button className='btn'>Get in touch</button>
-				<button className='btn'>My work</button>
+				<a href='#projects' className='btn'>My work</a>
+        <a href='#contact' className='btn'>Get in touch</a>
 			</div>
     </div>
   );
