@@ -1,8 +1,6 @@
-@mixin breakpoint($point) {
-	@if $point == md {
-		// 768px
-		@media (min-width: 768px) {
-			@content;
-		}
-	}
+
+// Visual aid to see what block level elements are doing with space
+@mixin trainingwheels {
+	border: 1px solid black;
+	background: rgba(grey, .2);
 }
