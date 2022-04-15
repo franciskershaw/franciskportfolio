@@ -1,9 +1,15 @@
 
 
-export const fetchProjects = async () => {
+export const fetchProjects = () => {
 	try {
-		const response = await fetch(`http://localhost:5000/api/projects`)
-		console.log(response);
+		fetch('/api/projects').then(
+			response => response.json()
+		).then(
+			data => {
+				console.log(data)
+				return(data)
+			}
+		)
 	} catch (err) {
 		console.log(err)
 	}

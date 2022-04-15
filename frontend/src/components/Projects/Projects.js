@@ -1,18 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchProjects } from '../../requests/requests';
 
 const Projects = () => {
+  const [projects, setProject] = useState([{}])
+  
   useEffect(() => {
-		console.log('useEffect');
-    const getProjects = async () => {
-      try {
-        const projects = await fetchProjects();
-        console.log(projects);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-		getProjects();
+    fetchProjects() 
   }, []);
 
   return (
