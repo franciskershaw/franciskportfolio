@@ -20,15 +20,15 @@ const Projects = () => {
   return (
     <div id="projects" className="projects">
       <h2>My recent work</h2>
-      {/* {projects.map((project, index) => (
-        <div key={`project_${index}`}>{project.title}</div>
-      ))} */}
       <div className="swiper">
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-          <SwiperSlide>Project 1</SwiperSlide>
-          <SwiperSlide>Project 2</SwiperSlide>
-          <SwiperSlide>Project 3</SwiperSlide>
-          <SwiperSlide>Project 4</SwiperSlide>
+          {projects.map((project, index) => (
+            <SwiperSlide key={`project-${index}`}>
+              <div>
+                <h3>{project.title}</h3>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
