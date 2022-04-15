@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper';
+import ProjectCard from './ProjectCard/ProjectCard';
 
 const Projects = () => {
   const [projects, setProjects] = useState([{}]);
@@ -24,9 +23,7 @@ const Projects = () => {
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
           {projects.map((project, index) => (
             <SwiperSlide key={`project-${index}`}>
-              <div>
-                <h3>{project.title}</h3>
-              </div>
+              <ProjectCard project={project} />
             </SwiperSlide>
           ))}
         </Swiper>
