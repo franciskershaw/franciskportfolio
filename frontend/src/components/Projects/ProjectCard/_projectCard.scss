@@ -1,14 +1,21 @@
 .projects__card {
   height: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+	h3 {
+		font-size: 2.5rem;
+	}
 
   &--container {
     border: 1px solid red;
     height: 80%;
-		width: 100%;
+    width: 100%;
     border-radius: $borderRadius;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
   }
-
-	&--image {
-		width: 100%;
-	}
 }

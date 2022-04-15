@@ -6,4 +6,9 @@
 	color: $primaryColor;
 	border: 1px solid $primaryColor;
 	border-radius: $borderRadius;
+
+	&--small {
+		font-size: 1.5rem;
+		padding: 1.5rem;
+	}
 }
