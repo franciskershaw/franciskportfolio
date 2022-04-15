@@ -16,6 +16,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="projects">
+      <h2>My recent work</h2>
       {projects.map((project, index) => (
         <div key={`project_${index}`}>{project.title}</div>
       ))}
