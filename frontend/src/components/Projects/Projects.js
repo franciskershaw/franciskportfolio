@@ -1,16 +1,24 @@
 import { useEffect, useState } from 'react';
-import { fetchProjects } from '../../requests/requests';
+// import { fetchProjects } from '../../requests/requests';
 
 const Projects = () => {
-  const [projects, setProject] = useState([{}])
+  const [projects, setProjects] = useState([{}])
   
   useEffect(() => {
-    fetchProjects() 
+    fetch('/api/projects').then(
+      response => response.json()
+    ).then (
+      data => {
+        setProjects(data)
+      }
+    )
   }, []);
 
   return (
     <div id="projects" className="projects">
-      I'm the Projects section
+      {projects.map((project) => (
+        <div>{project._id}</div>
+      ))}
     </div>
   );
 };
