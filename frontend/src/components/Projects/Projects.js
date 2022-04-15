@@ -16,8 +16,8 @@ const Projects = () => {
 
   return (
     <div id="projects" className="projects">
-      {projects.map((project) => (
-        <div>{project._id}</div>
+      {projects.map((project, index) => (
+        <div key={`project_${index}`}>{project.title}</div>
       ))}
     </div>
   );
