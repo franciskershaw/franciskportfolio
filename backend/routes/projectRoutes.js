@@ -4,6 +4,7 @@ const router = express.Router();
 
 const Project = require('../models/Project');
 
+// Get all projects
 router.get('/', asyncHandler(async (req, res) => {
 	try {
 		const projects = await Project.find();
@@ -13,6 +14,7 @@ router.get('/', asyncHandler(async (req, res) => {
 	}
 }));
 
+// Post a new project
 router.post('/', asyncHandler(async (req, res) => {
 	try {
 		const project = await Project.create(req.body)
@@ -22,6 +24,7 @@ router.post('/', asyncHandler(async (req, res) => {
 	}
 }))
 
+// Edit a specific project
 router.put('/:id', asyncHandler(async (req, res) => {
 	try {
 		const project = await Project.findById(req.params.id)
@@ -44,5 +47,7 @@ router.put('/:id', asyncHandler(async (req, res) => {
 	}
 	
 }))
+
+// Delete a project
 
 module.exports = router;

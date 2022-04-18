@@ -19,6 +19,7 @@ app.use(express.json());
 // Routes
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/projects', require('./routes/projectRoutes'));
+app.use('/api/skills', require('./routes/skillRoutes'));
 
 // Serve Frontend
 if (process.env.NODE_ENV === 'production') {
