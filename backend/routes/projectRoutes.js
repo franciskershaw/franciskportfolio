@@ -2,6 +2,8 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
 
+const { protectRoute } = require('../middleware/authMiddleware');
+
 const Project = require('../models/Project');
 
 // Get all projects
@@ -15,7 +17,7 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 // Post a new project
-router.post('/', asyncHandler(async (req, res) => {
+router.post('/', protectRoute, asyncHandler(async (req, res) => {
 	try {
 		const project = await Project.create(req.body)
 		res.status(201).json(project)
@@ -25,7 +27,7 @@ router.post('/', asyncHandler(async (req, res) => {
 }))
 
 // Edit a specific project
-router.put('/:id', asyncHandler(async (req, res) => {
+router.put('/:id', protectRoute, asyncHandler(async (req, res) => {
 	try {
 		const project = await Project.findById(req.params.id)
 	

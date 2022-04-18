@@ -2,6 +2,8 @@ const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
 
+const { protectRoute } = require('../middleware/authMiddleware');
+
 const Skill = require('../models/Skill');
 
 // Get skills
@@ -15,7 +17,7 @@ router.get('/', asyncHandler(async (req, res) => {
 }))
 
 // Post skills
-router.post('/', asyncHandler(async (req, res) => {
+router.post('/', protectRoute, asyncHandler(async (req, res) => {
 	try {
 		const skill = await Skill.create(req.body);
 		res.status(201).json(skill)
@@ -25,7 +27,7 @@ router.post('/', asyncHandler(async (req, res) => {
 }))
 
 // Edit a specific skill
-router.put('/:id', asyncHandler(async(req, res) => {
+router.put('/:id', protectRoute, asyncHandler(async(req, res) => {
 	try {
 		const skill = await Skill.findById(req.params.id)
 
