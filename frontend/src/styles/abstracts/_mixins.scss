@@ -4,3 +4,9 @@
 	border: 1px solid black;
 	background: rgba(grey, .2);
 }
+
+@mixin flexCenterCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

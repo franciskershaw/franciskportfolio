@@ -1,21 +1,41 @@
 .projects__card {
   height: 100%;
   margin-left: 1rem;
-  margin-right: 1rem;
-
-	h3 {
-		font-size: 2.5rem;
-	}
+  margin-right: 1rem;	
 
   &--container {
-    border: 1px solid red;
     height: 80%;
     width: 100%;
     border-radius: $borderRadius;
-    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
   }
+
+  &--title, &--skills, &--buttons, &--image {
+    @include flexCenterCenter;
+    border: 1px solid black;
+  }
+
+  &--title {
+    height: 25%;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+  }
+ 
 }
