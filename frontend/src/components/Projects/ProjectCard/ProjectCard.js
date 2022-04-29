@@ -1,17 +1,28 @@
 import { useEffect, useState } from 'react';
 
 const ProjectCard = (props) => {
-  // const [skills, setSkills] = useState([])
+  const [skills, setSkills] = useState([]);
 
-  // console.log(props.project.skills)
+  useEffect(() => {
+    const requestOptions = {
+      method: 'GET',
+    };
 
-  // useEffect(() => {
-
-  // },[props.project.skills])
+    const projectSkills = props.project.skills;
+    if (projectSkills) {
+      projectSkills.map((skill) => {
+        fetch(`/api/skills/${skill}`, requestOptions)
+          .then((response) => response.json())
+          .then((data) => {
+            setSkills((prevState) => [...prevState, data]);
+          });
+      });
+    }
+  }, [props.project.skills]);
 
   const style = {
-    borderTop: `thick solid ${props.project.backgroundColor}`
-  }
+    borderTop: `thick solid ${props.project.backgroundColor}`,
+  };
 
   return (
     <div className="projects__card">
@@ -21,8 +32,9 @@ const ProjectCard = (props) => {
           <h4>{props.project.subHeading}</h4>
         </div>
         <div className="projects__card--skills">
-          <span>1 skill</span>
-          <span>2 skill</span>
+          {skills.map((skill, index) => (
+            <p key={`${props.project.title}_skill_${index}`}>{skill.name}</p>
+          ))}
         </div>
         <div className="projects__card--buttons">
           <a
@@ -53,7 +65,6 @@ const ProjectCard = (props) => {
             </picture>
           </div>
         )}
-        
       </div>
     </div>
   );
