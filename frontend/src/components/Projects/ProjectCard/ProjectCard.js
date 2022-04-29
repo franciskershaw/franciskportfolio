@@ -33,7 +33,7 @@ const ProjectCard = (props) => {
         </div>
         <div className="projects__card--skills">
           {skills.map((skill, index) => (
-            <p key={`${props.project.title}_skill_${index}`}>{skill.name}</p>
+            <img alt={`${skill.name} logo`} className='skill__icon' src={skill.iconLink} key={`${props.project.title}_skill_${index}`}></img>
           ))}
         </div>
         <div className="projects__card--buttons">
