@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
 
     const projectSkills = props.project.skills;
     if (projectSkills) {
-      projectSkills.map((skill) => {
+      projectSkills.forEach((skill) => {
         fetch(`/api/skills/${skill}`, requestOptions)
           .then((response) => response.json())
           .then((data) => {
