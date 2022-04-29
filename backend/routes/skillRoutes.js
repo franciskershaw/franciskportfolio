@@ -16,6 +16,16 @@ router.get('/', asyncHandler(async (req, res) => {
 	}
 }))
 
+// Get individual skill
+router.get('/:id', asyncHandler(async (req, res) => {
+	try {
+		const skill = await Skill.findById(req.params.id);
+		res.status(200).json(skill)
+	} catch (err) {
+		console.log(err)
+	}
+}))
+
 // Post skills
 router.post('/', protectRoute, asyncHandler(async (req, res) => {
 	try {
