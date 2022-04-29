@@ -9,7 +9,10 @@ const Projects = () => {
   const [projects, setProjects] = useState([{}]);
 
   useEffect(() => {
-    fetch('/api/projects')
+    const requestOptions = {
+      method: 'GET',
+    };
+    fetch('/api/projects', requestOptions)
       .then((response) => response.json())
       .then((data) => {
         setProjects(data);
