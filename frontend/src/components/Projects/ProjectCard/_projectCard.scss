@@ -1,9 +1,17 @@
 .projects__card {
+  @include respond(tab-port) {
+    // width: 45rem;
+    height: 65rem;
+  }
   height: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
 
   &--container {
+
+    @include respond(tab-port) {
+      width: 95%;
+    }
     height: 80%;
     width: 100%;
     border-radius: $borderRadius;
@@ -24,28 +32,41 @@
   &--buttons,
   &--image {
     @include flexCenterCenter;
-    // border: 1px solid black;
   }
 
   &--title {
     height: 25%;
     flex-direction: column;
     justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     h3 {
+      @include respond(tab-port) {
+        font-size: 3.2rem;
+      }
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     h4 {
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
       font-weight: 400;
     }
   }
 
   &--skills {
+    
     img.skill__icon {
-      width: 3rem;
-      height: 3rem;
+      @include respond(tab-port) {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      width: 3.5rem;
+      height: 3.5rem;
       margin-left: .5rem;
       margin-right: .5rem;  
     }
