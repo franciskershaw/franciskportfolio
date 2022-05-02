@@ -1,11 +1,17 @@
 .swiper {
+  @include respond(tab-port) {
+    height: 90%;
+  }
+  @include respond(tab-land) {
+    height: 100%;  
+  }
   width: 100%;
   height: 100%;
+  overflow: visible;
 }
 
 .swiper-slide {
   text-align: center;
-  // background: lightblue;
 
   /* Center slide text vertically */
   display: -webkit-box;

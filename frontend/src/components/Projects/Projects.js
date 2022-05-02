@@ -21,15 +21,16 @@ const Projects = () => {
 
   return (
     <div id="projects" className="page projects">
-      <h2 className="page__heading">My recent work</h2>
-      {/* Render a swiper if the screen width is less than 768px */}
+      <div className='projects__title'>
+        <h2 className="page__heading">My recent work</h2>
+      </div>
       <div className="swiper">
         <Swiper
           pagination={true}
           modules={[Pagination]}
           className="mySwiper"
           breakpoints={{
-            768: { width: 768, slidesPerView: 2 }
+            768: { width: 768, slidesPerView: 2 },
           }}>
           {projects.map((project, index) => (
             <SwiperSlide key={`project-${index}`}>
