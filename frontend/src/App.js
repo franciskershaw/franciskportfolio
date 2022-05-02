@@ -3,10 +3,29 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Hero from './components/Hero/Hero';
 import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [windowDimensions, setWindowDimensions] = useState({
+    winWidth: window.innerWidth,
+    winHeight: window.innerHeight
+  })
+
+  const detectSize = () => {
+    setWindowDimensions({
+      winWidth: window.innerWidth,
+      winHeight: window.innerHeight,
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', detectSize)
+
+    return () => {
+      window.removeEventListener('resize', detectSize)
+    }
+  },[windowDimensions])
 
   return (
     <div className="page-container">
