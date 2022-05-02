@@ -1,7 +1,7 @@
 const Contact = () => {
 	return (
-		<div id='contact' className='contact'>
-			This is the contact section
+		<div id='contact' className='page contact'>
+			<h2 className='page__heading'>Get in touch!</h2>
 		</div>
 	)
 }
