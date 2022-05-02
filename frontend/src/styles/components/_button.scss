@@ -11,4 +11,9 @@
 		font-size: 1.5rem;
 		padding: 1.5rem;
 	}
+
+	&--primary {
+		background: $primaryColor;
+		color: $colorWhite;
+	}
 }
