@@ -12,6 +12,11 @@
 		padding: 1.5rem;
 	}
 
+	&--md {
+		font-size: 2rem;
+		padding: 2rem;
+	}
+
 	&--primary {
 		background: $primaryColor;
 		color: $colorWhite;

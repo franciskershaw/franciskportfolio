@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import AppContext from '../../../context/AppContext';
 
 const ProjectCard = (props) => {
   const [skills, setSkills] = useState([]);
+
+  const { windowDimensions } = useContext(AppContext);
 
   useEffect(() => {
     const requestOptions = {
@@ -38,14 +41,14 @@ const ProjectCard = (props) => {
         </div>
         <div className="projects__card--buttons">
           <a
-            className="btn btn--small"
+            className={`btn btn--${windowDimensions.winWidth < 768 ? 'small' : 'md'}`}
             href={props.project.gitRepo}
             target="_blank"
             rel="noreferrer">
             Git Repo
           </a>
           <a
-            className="btn btn--small"
+            className={`btn btn--${windowDimensions.winWidth < 768 ? 'small' : 'md'}`}
             href={props.project.liveSite}
             target="_blank"
             rel="noreferrer">

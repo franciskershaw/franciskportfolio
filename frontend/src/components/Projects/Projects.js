@@ -1,5 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
-import AppContext from '../../context/AppContext';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,7 +7,6 @@ import ProjectCard from './ProjectCard/ProjectCard';
 
 const Projects = () => {
   const [projects, setProjects] = useState([{}]);
-  const { windowDimensions } = useContext(AppContext);
 
   useEffect(() => {
     const requestOptions = {
@@ -40,7 +38,6 @@ const Projects = () => {
           ))}
         </Swiper>
       </div>
-      )
     </div>
   );
 };
