@@ -4,13 +4,13 @@ import Hero from './components/Hero/Hero';
 import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import { useState } from 'react';
-import { DimensionsProvider } from './context/DimensionsContext';
+import { AppProvider } from './context/AppContext';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <DimensionsProvider>
+    <AppProvider>
       <div className="page-container">
         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
@@ -20,7 +20,7 @@ function App() {
           <Contact />
         </div>
       </div>
-    </DimensionsProvider>
+    </AppProvider>
   );
 }
 

@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from 'react';
-import DimensionsContext from '../../context/DimensionsContext';
+import AppContext from '../../context/AppContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,9 +8,7 @@ import ProjectCard from './ProjectCard/ProjectCard';
 
 const Projects = () => {
   const [projects, setProjects] = useState([{}]);
-  const { windowDimensions } = useContext(DimensionsContext);
-
-  console.log(windowDimensions)
+  const { windowDimensions } = useContext(AppContext);
 
   useEffect(() => {
     const requestOptions = {

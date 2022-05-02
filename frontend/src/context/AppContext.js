@@ -1,8 +1,8 @@
 import { createContext, useState, useEffect } from 'react';
 
-const DimensionsContext = createContext();
+const AppContext = createContext();
 
-export function DimensionsProvider({ children }) {
+export function AppProvider({ children }) {
   const [windowDimensions, setWindowDimensions] = useState({
     winWidth: window.innerWidth,
     winHeight: window.innerHeight,
@@ -24,10 +24,10 @@ export function DimensionsProvider({ children }) {
   }, [windowDimensions]);
 
   return (
-    <DimensionsContext.Provider value={{ windowDimensions }}>
+    <AppContext.Provider value={{ windowDimensions }}>
       {children}
-    </DimensionsContext.Provider>
+    </AppContext.Provider>
   );
 }
 
-export default DimensionsContext;
+export default AppContext;
