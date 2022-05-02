@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import DimensionsContext from '../../context/DimensionsContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -7,6 +8,9 @@ import ProjectCard from './ProjectCard/ProjectCard';
 
 const Projects = () => {
   const [projects, setProjects] = useState([{}]);
+  const { windowDimensions } = useContext(DimensionsContext);
+
+  console.log(windowDimensions)
 
   useEffect(() => {
     const requestOptions = {
@@ -21,7 +25,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="page projects">
-      <h2 className='page__heading'>My recent work</h2>
+      <h2 className="page__heading">My recent work</h2>
       <div className="swiper">
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
           {projects.map((project, index) => (
