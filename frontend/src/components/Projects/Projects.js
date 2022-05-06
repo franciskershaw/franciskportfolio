@@ -24,10 +24,6 @@ const Projects = () => {
   }, []);
 
   useEffect(() => {
-    calcSlidesPerView()
-  }, [windowDimensions])
-
-  const calcSlidesPerView = () => {
     if (windowDimensions.winWidth <= 600) {
       setSlidesPerView(1)
     } else if (windowDimensions.winWidth < 900) {
@@ -37,12 +33,13 @@ const Projects = () => {
     } else  {
       setSlidesPerView(4)
     }
-  }
+  }, [windowDimensions])
 
   return (
     <div id="projects" className="page projects">
       <div className='projects__title'>
         <h2 className="page__heading">My recent work</h2>
+        <h3>Here are some of the projects I've completed in the past few years</h3>
       </div>
       <div className="swiper">
         <Swiper

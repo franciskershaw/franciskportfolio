@@ -8,11 +8,11 @@
   margin-right: 1rem;
 
   &--container {
-
     @include respond(tab-port) {
       width: 95%;
     }
     height: 80%;
+    max-height: 50rem;
     width: 100%;
     border-radius: $borderRadius;
     display: flex;
@@ -58,7 +58,6 @@
   }
 
   &--skills {
-    
     img.skill__icon {
       @include respond(tab-port) {
         width: 5rem;
@@ -67,8 +66,8 @@
 
       width: 3.5rem;
       height: 3.5rem;
-      margin-left: .5rem;
-      margin-right: .5rem;  
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
   }
 }
