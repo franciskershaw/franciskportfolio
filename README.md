@@ -1,6 +1,8 @@
 # FrancisK - Portfolio
 
-(Hero image and brief intro)
+This project is designed to showcase all of the work I produced while retraining on my Code Institute diploma, as well as any future personal applications I decide to work on. It uses a custom Express and MongoDB backend so that the building blocks are in place for version 2 to have complete CRUD (create, read, update, delete) capability so that I'll be able to manage all projects and skills from the frontend. I chose to make this my first React JS (and therefore a MERN stack) project as a means to practice skills learnt in my day job.
+
+You can find the link the repository [here](https://github.com/franciskershaw/franciskportfolio), and the live website for version one will be available soon.
 
 ## Table of Contents
 
@@ -24,11 +26,7 @@
 
 ## Notes pre development
 
-Key points to be aware of:
-* First personal app using Node and Express, with Nunjucks as the templating language to keep some consistency with previous projects.
-* Going to attempt to code the site without Bootstrap so that I can practice my CSS grid and flex skills.
-* Need to do research on SEO to try and make the site climb the google rankings.
-* Need to work out how to register domain name and integrate with AWS to host static files on production version of the site.
+The project has already gone through several iterations, having been most recently reworked from the ground up to break the backend and frontend into separate directories so that React could be employed on the frontend. However, the ideas and requirements detailed below have remained consistent from the start.
 
 ## User stories
 
@@ -62,6 +60,7 @@ Key points to be aware of:
 
 ### Nice to have
 * Blog
+* Complete crud functionality
 
 ## Structure plane
 
@@ -76,28 +75,24 @@ Key points to be aware of:
 * The navigation bar will have my name on the top left, the main navigation elements in the middle, and social links + CV on the right
 * The footer will have the same content as the navigation bar
 
-### Templates
-* index.html
-* view_project.html
-* add_project.html
-* edit_project.html
-* login.html
-
 ## Skeleton plane
 
 ## Surface plane
 
-### Keywords:
-* Professional
-* Playful
-
 ### Colour scheme:
-* #f6f1f1
-* #dbe9ee
-* #c0d6df
-* #567bb3
-* #405863
+Still deciding this
 
 ### Typography
 * Quicksand
 * Dosis
+
+## Data model
+
+## Technologies used
+* React as a the frontend framework
+* SCSS for styling
+* Express / Node.JS to handle the backend logic
+* MongoDB / Mongoose to handle and store data
+* EmailJs library to send emails from the frontend
+
+
