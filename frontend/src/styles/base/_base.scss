@@ -12,9 +12,6 @@ html {
 
 body {
   box-sizing: border-box;
-  @include respond(long-device) {
-    background: lightblue;
-  }
 }
 
 .page-container {
