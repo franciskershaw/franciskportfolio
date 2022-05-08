@@ -1,11 +1,15 @@
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
+
 const Hero = () => {
+  const { windowDimensions } = useContext(AppContext);
+
   return (
     <div id="hero" className='hero'>
       <div className='hero__heading'>
         <h1 className='mb-medium'>Hi there, I'm Francis.</h1>
         <p>
-          I'm a frontend developer, specialising in React but with experience
-          all over the stack.
+        - width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px
         </p>
       </div>
 			<div className='hero__cta'>

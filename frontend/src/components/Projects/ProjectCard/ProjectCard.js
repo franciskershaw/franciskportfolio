@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import AppContext from '../../../context/AppContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -7,7 +7,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 const ProjectCard = (props) => {
   const [skills, setSkills] = useState([]);
 
-  const { windowDimensions } = useContext(AppContext);
+  // const { windowDimensions } = useContext(AppContext);
 
   useEffect(() => {
     const requestOptions = {

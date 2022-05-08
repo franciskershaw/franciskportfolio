@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
+import AppContext from '../../context/AppContext';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -8,6 +9,8 @@ const Contact = () => {
   const [message, setMessage] = useState('');
 
   const formRef = useRef();
+
+  const { windowDimensions } = useContext(AppContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +39,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="page contact">
-      <h2 className="page__heading">Get in touch!</h2>
+      <h2 className="page__heading">Get in touch! width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</h2>
       <form className='form' ref={formRef} onSubmit={handleSubmit}>
         <div className="form__group">
           <input
