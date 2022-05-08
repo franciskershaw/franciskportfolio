@@ -42,6 +42,9 @@ $breakpoint argument choices:
 	}
 
 	// Special cases
+	// @if $breakpoint = long-phone {
+	// 	@media only screen and (max-width: 48em) and (min-height: 49em) { @content }; //
+	// }
 	@if $breakpoint == tab-special {
 		@media only screen and (min-width: 48em) and (max-height: 54.5em) { @content }; // minWidth 768px / maxWidth 900px / maxHeight 872px
 	}

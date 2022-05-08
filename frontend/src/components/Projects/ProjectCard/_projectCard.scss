@@ -38,7 +38,7 @@
   }
 
   &--title {
-    height: 25%;
+    height: 35%;
     flex-direction: column;
     justify-content: center;
     padding-left: 2rem;
@@ -67,6 +67,8 @@
   }
 
   &--skills {
+    height: 10rem;
+
     img.skill__icon {
       @include respond(tab-port) {
         width: 5rem;
@@ -83,9 +85,13 @@
     }
   }
 
+  &--buttons {
+    height: 12rem;
+  }
+
   &--image {
 
     background: rgba(grey, .2);
-    min-height: 230px;
+    min-height: 25rem;
   }
 }
