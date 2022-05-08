@@ -2,7 +2,7 @@
   @include respond(tab-port) {
     height: 90%;
   }
-  @include respond(tab-land) {
+  @include respond(tab-special) {
     height: 100%;
   }
   width: 100%;

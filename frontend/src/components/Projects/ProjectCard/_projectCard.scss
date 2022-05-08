@@ -1,8 +1,11 @@
 .projects__card {
   @include respond(tab-port) {
-    // width: 45rem;
     height: 65rem;
   }
+  @include respond(laptop) {
+    height: 52rem;
+  }
+  margin-top: 2rem;
   height: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -45,6 +48,9 @@
       @include respond(tab-port) {
         font-size: 3.2rem;
       }
+      @include respond(laptop) {
+        font-size: 2.5rem;
+      }
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
@@ -52,6 +58,9 @@
     h4 {
       @include respond(tab-port) {
         font-size: 2rem;
+      }
+      @include respond(laptop) {
+        font-size: 1.5rem;
       }
       font-weight: 400;
     }
@@ -63,7 +72,10 @@
         width: 5rem;
         height: 5rem;
       }
-
+      @include respond(laptop) {
+        width: 3rem;
+        height: 3rem;
+      }
       width: 3.5rem;
       height: 3.5rem;
       margin-left: 0.5rem;

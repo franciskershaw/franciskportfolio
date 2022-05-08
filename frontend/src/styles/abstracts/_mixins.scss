@@ -43,10 +43,9 @@ $breakpoint argument choices:
 
 	// Special cases
 	@if $breakpoint == tab-special {
-		@media only screen and (min-width: 48em) and (max-width: 56.25em ) and (max-height: 54.5em) { @content }; // minWidth 768px / maxWidth 900px / maxHeight 872px
+		@media only screen and (min-width: 48em) and (max-height: 54.5em) { @content }; // minWidth 768px / maxWidth 900px / maxHeight 872px
 	}
-
 	@if $breakpoint == laptop {
-		@media only screen and (minwidth: 56.25em) and (max-height: 50em) { @content }; // minWidth 900px / maxHeight 800px
+		@media only screen and (min-width: 56.25em) and (max-height: 50em) { @content }; // minWidth 900px / maxHeight 800px
 	}
 }
