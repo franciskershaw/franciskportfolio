@@ -108,7 +108,9 @@
   }
 
   &--image {
-
+    @include respond(tab-land) {
+      min-height: 27rem;
+    }
     background: rgba(grey, .2);
     min-height: 25rem;
   }

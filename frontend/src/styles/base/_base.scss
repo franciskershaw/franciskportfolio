@@ -18,6 +18,10 @@ body {
   height: 100vh;
 
   .page-content {
+    @include respond(tab-port) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
     overflow-x: hidden;
     width: 100%;
     height: calc(100vh - $headerHeight);
