@@ -66,6 +66,7 @@
 	&:hover {
 		color: $primaryColor;
 		background: $colorWhite;
+		border: 1px solid $primaryColor;
 
 		&::after,
 		&::before {
