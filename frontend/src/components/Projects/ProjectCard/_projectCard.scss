@@ -70,4 +70,10 @@
       margin-right: 0.5rem;
     }
   }
+
+  &--image {
+
+    background: rgba(grey, .2);
+    min-height: 230px;
+  }
 }
