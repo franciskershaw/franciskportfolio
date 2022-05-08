@@ -17,6 +17,9 @@
     @include respond(long-device) {
       max-height: 65rem;
     }
+    @include respond (laptop) {
+      height: 44rem;
+    }
     height: 80%;
     max-height: 50rem;
     width: 100%;
@@ -25,6 +28,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    background: rgba(grey, .2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 
@@ -112,7 +116,10 @@
     @include respond(tab-land) {
       min-height: 27rem;
     }
-    background: rgba(grey, .2);
+    @include respond(laptop) {
+      min-height: 25rem;
+    }
+    // background: rgba(grey, .2);
     min-height: 25rem;
   }
 }

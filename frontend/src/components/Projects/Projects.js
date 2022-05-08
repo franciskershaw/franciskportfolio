@@ -52,6 +52,7 @@ const Projects = () => {
           pagination={true}
           modules={[Pagination]}
           className="mySwiper"
+          scrollbar={{ dragable: true }}
           slidesPerView={slidesPerView}>
           {projects.map((project, index) => (
             <SwiperSlide key={`project-${index}`}>
