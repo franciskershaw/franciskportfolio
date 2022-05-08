@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <div id="projects" className="page projects">
       <div className='projects__title'>
-        <h2 className="page__heading">My recent work - width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</h2>
+        <h2 className="page__heading">My recent work <span style={{'fontSize': '1rem'}}>- width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</span></h2>
         {/* <h3>Here are some of the projects I've completed in the past few years</h3> */}
       </div>
       <div className="swiper">

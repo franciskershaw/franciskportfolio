@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="page contact">
-      <h2 className="page__heading">Get in touch! width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</h2>
+      <h2 className="page__heading">Get in touch! <span style={{'fontSize': '1rem'}}>- width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</span></h2>
       <form className='form' ref={formRef} onSubmit={handleSubmit}>
         <div className="form__group">
           <input

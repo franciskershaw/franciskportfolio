@@ -9,7 +9,8 @@ const Hero = () => {
       <div className='hero__heading'>
         <h1 className='mb-medium'>Hi there, I'm Francis.</h1>
         <p>
-        - width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px
+          I'm a frontend developer, specialising in React but with experience
+          all over the stack. <span style={{'fontSize': '1rem'}}>- width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</span>
         </p>
       </div>
 			<div className='hero__cta'>
