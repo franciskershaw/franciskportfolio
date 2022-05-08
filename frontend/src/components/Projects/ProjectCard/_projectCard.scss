@@ -1,7 +1,6 @@
 .projects__card {
-  @include respond(tab-port) {
-    height: 65rem;
-  }
+  @include trainingwheels;
+
   @include respond(laptop) {
     height: 52rem;
   }
@@ -11,6 +10,7 @@
   margin-right: 1rem;
 
   &--container {
+    // @include trainingwheels;
     @include respond(tab-port) {
       width: 95%;
     }

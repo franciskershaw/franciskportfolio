@@ -1,7 +1,4 @@
 .swiper {
-  @include respond(tab-port) {
-    height: 90%;
-  }
   @include respond(tab-special) {
     height: 100%;
   }
@@ -15,7 +12,9 @@
 }
 
 .swiper-pagination {
-  bottom: 4.5rem !important;
+  @include trainingwheels;
+  height: 8%;
+  display: block;
 }
 
 .swiper-slide img {

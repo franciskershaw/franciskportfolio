@@ -1,6 +1,9 @@
-// .projects {
+.projects {
 
-// 	&__title {
-// 		height: 5rem;
-// 	}
-// }
+	&__title {
+		@include trainingwheels;
+		display: flex;
+		align-items: center;
+		height: 10%;
+	}
+}
