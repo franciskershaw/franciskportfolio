@@ -1,5 +1,8 @@
 import { useEffect, useState, useContext } from 'react';
 import AppContext from '../../../context/AppContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectCard = (props) => {
   const [skills, setSkills] = useState([]);
@@ -36,23 +39,27 @@ const ProjectCard = (props) => {
         </div>
         <div className="projects__card--skills">
           {skills.map((skill, index) => (
-            <img alt={`${skill.name} logo`} className='skill__icon' src={require(`../../../assets/${skill.iconLink}`)} key={`${props.project.title}_skill_${index}`}></img>
+            <img
+              alt={`${skill.name} logo`}
+              className="skill__icon"
+              src={require(`../../../assets/${skill.iconLink}`)}
+              key={`${props.project.title}_skill_${index}`}></img>
           ))}
         </div>
         <div className="projects__card--buttons">
           <a
-            className={`btn btn--${windowDimensions.winWidth < 768 ? 'small' : 'md'}`}
-            href={props.project.gitRepo}
-            target="_blank"
-            rel="noreferrer">
-            Git Repo
-          </a>
-          <a
-            className={`btn btn--${windowDimensions.winWidth < 768 ? 'small' : 'md'}`}
+            className='btn btn--link btn--primary'
             href={props.project.liveSite}
             target="_blank"
             rel="noreferrer">
-            Live Site
+            <FontAwesomeIcon className="btn__icon" icon={faArrowUpRightFromSquare}/> Live site
+          </a>
+          <a
+            className='btn btn--link btn--primary'
+            href={props.project.gitRepo}
+            target="_blank"
+            rel="noreferrer">
+            <FontAwesomeIcon className="btn__icon " icon={faGithub} /> GitHub
           </a>
         </div>
         {props.project.screenShotOne && (

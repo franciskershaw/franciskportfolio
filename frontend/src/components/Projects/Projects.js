@@ -39,7 +39,7 @@ const Projects = () => {
     <div id="projects" className="page projects">
       <div className='projects__title'>
         <h2 className="page__heading">My recent work</h2>
-        <h3>Here are some of the projects I've completed in the past few years</h3>
+        {/* <h3>Here are some of the projects I've completed in the past few years</h3> */}
       </div>
       <div className="swiper">
         <Swiper
