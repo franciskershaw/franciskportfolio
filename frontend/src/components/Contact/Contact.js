@@ -39,8 +39,17 @@ const Contact = () => {
 
   return (
     <div id="contact" className="page contact">
-      <h2 className="page__heading">Get in touch! <span style={{'fontSize': '1rem'}}>- width: {windowDimensions.winWidth}px, height: {windowDimensions.winHeight}px</span></h2>
-      <form className='form' ref={formRef} onSubmit={handleSubmit}>
+      <div className="page__heading--container">
+        <h2 className="page__heading">
+          Get in touch!{' '}
+          <span style={{ fontSize: '1rem' }}>
+            - width: {windowDimensions.winWidth}px, height:{' '}
+            {windowDimensions.winHeight}px
+          </span>
+        </h2>
+      </div>
+
+      <form className="form" ref={formRef} onSubmit={handleSubmit}>
         <div className="form__group">
           <input
             value={userName}
@@ -49,8 +58,8 @@ const Contact = () => {
             name="user_name"
             onChange={(e) => setUserName(e.target.value)}
             className="form__input"
-						placeholder="Name"
-						required
+            placeholder="Name"
+            required
           />
         </div>
         <div className="form__group">
@@ -61,8 +70,8 @@ const Contact = () => {
             name="user_email"
             onChange={(e) => setEmail(e.target.value)}
             className="form__input"
-						placeholder='Email address'
-						required
+            placeholder="Email address"
+            required
           />
         </div>
         <div className="form__group">
@@ -73,12 +82,14 @@ const Contact = () => {
             cols="30"
             rows="10"
             onChange={(e) => setMessage(e.target.value)}
-						placeholder="What's on your mind?"
+            placeholder="What's on your mind?"
             className="form__input"
-						required></textarea>
+            required></textarea>
         </div>
         <div className="form__group form__group--buttons">
-          <button className='btn btn--small btn--primary' type="submit">Send Message</button>
+          <button className="btn btn--small btn--primary" type="submit">
+            Send Message
+          </button>
         </div>
         {thankYou && (
           <span>Thanks for your message, I'll get back to you ASAP :)</span>

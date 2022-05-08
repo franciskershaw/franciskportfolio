@@ -48,7 +48,23 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 
+  &__heading--container {
+		display: flex;
+    flex-direction: column;
+		justify-content: center;
+		height: 10%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @include respond(long-device) {
+      height: 14%;
+    }
+  }
+
   &__heading {
+    @include respond(long-device) {
+      font-size: 2.75rem;
+    }
     @include respond(tab-port) {
       font-size: 4rem;
     }
