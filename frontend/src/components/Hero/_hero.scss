@@ -1,10 +1,13 @@
 .hero {
+  @include trainingwheels;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 	justify-content: space-evenly;
 
   &__heading {
+    @include trainingwheels;
     padding-left: 3rem;
     padding-right: 3rem;
 
@@ -17,6 +20,7 @@
   }
 
 	&__cta {
+    @include trainingwheels;
 		height: 15rem;
     display: flex;
     justify-content: center;
