@@ -1,13 +1,17 @@
 .hero {
-  @include trainingwheels;
+  // @include trainingwheels;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 	justify-content: space-evenly;
+  background-image: linear-gradient(to right bottom, rgba($darkColor, .95), rgba($primaryColor, .95)), url('../../assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: $white;
 
   &__heading {
-    @include trainingwheels;
+    // @include trainingwheels;
     padding-left: 3rem;
     padding-right: 3rem;
 
@@ -20,10 +24,36 @@
   }
 
 	&__cta {
-    @include trainingwheels;
+    // @include trainingwheels;
 		height: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
 	}
+}
+
+.ityped-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.5s infinite;
+  -moz-animation: blink 0.5s infinite;
+  animation: blink 0.5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+      opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+      opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+      opacity: 0;
+  }
 }
