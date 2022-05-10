@@ -3,8 +3,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-	justify-content: space-evenly;
-  background-image: linear-gradient(to right bottom, rgba($darkColor, .9), rgba($primaryColor, .9)), url('../../assets/hero-image.jpeg');
+  justify-content: space-evenly;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($darkColor, 0.9),
+      rgba($primaryColor, 0.9)
+    ),
+    url('../../assets/hero-image.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,20 +22,21 @@
     h1 {
       font-size: 4rem;
     }
-		p {
-			font-size: 2rem;
-		}
+    h3 {
+      font-size: 2.5rem;
+    }
   }
 
-	&__cta {
-		height: 15rem;
+  &__cta {
+    height: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
-	}
+  }
 }
 
-.topSpanContainer, .bottomSpanContainer {
+.topSpanContainer,
+.bottomSpanContainer {
   width: 100%;
   display: flex;
   font-family: 'Amatic SC', cursive;
@@ -39,12 +45,11 @@
     font-size: 2rem;
     margin-left: 2rem;
   }
-  // @include trainingwheels;
 }
 
 .topSpanContainer {
   flex-direction: column;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   justify-content: flex-start;
 }
 
@@ -68,6 +73,30 @@
   right: 1.2rem;
 }
 
+.appear-first {
+  opacity: 0;
+	animation-name: appear;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.appear-second {
+  opacity: 0;
+	animation-name: appear;
+	animation-duration: 2s;
+	animation-delay: 5.5s;
+	animation-fill-mode: forwards;
+}
+
+.appear-third {
+  opacity: 0;
+	animation-name: appear;
+	animation-duration: 2s;
+	animation-delay: 7s;
+	animation-fill-mode: forwards;
+}
+
 .ityped-cursor {
   opacity: 1;
   -webkit-animation: blink 0.5s infinite;
@@ -78,18 +107,27 @@
 
 @keyframes blink {
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes blink {
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 @-moz-keyframes blink {
   100% {
-      opacity: 0;
+    opacity: 0;
   }
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
 }
