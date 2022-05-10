@@ -4,6 +4,8 @@ import { init } from 'ityped';
 
 const Hero = () => {
   const h1Ref = useRef();
+  const widthLine = useRef();
+  const heightLine = useRef();
 
   const { windowDimensions } = useContext(AppContext);
 
@@ -17,11 +19,18 @@ const Hero = () => {
     });
   }, []);
 
+  useEffect(() => {
+    widthLine.current.style.width = "100%";
+    heightLine.current.style.height = '100%';
+  },[])
+
   return (
     <div id="hero" className="hero">
       <div className="topSpanContainer">
         <aside>Width: {windowDimensions.winWidth}px</aside>
+        <div ref={widthLine} className="widthLine"></div>
       </div>
+      {/* <div className="widthLine"></div> */}
       <div className="hero__heading">
         <h1 className="mb-medium">
           <span ref={h1Ref}></span>
@@ -40,7 +49,7 @@ const Hero = () => {
       <div className="bottomSpanContainer">
         <aside>Height: {windowDimensions.winHeight}px</aside>
       </div>
-      <div className="heightLine"></div>
+      <div ref={heightLine} className="heightLine"></div>
     </div>
   );
 };

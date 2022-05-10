@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
 	justify-content: space-evenly;
-  background-image: linear-gradient(to right bottom, rgba($darkColor, .95), rgba($primaryColor, .95)), url('../../assets/hero-image.jpeg');
+  background-image: linear-gradient(to right bottom, rgba($darkColor, .9), rgba($primaryColor, .9)), url('../../assets/hero-image.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,16 +37,15 @@
   width: 100%;
   display: flex;
   font-family: 'Amatic SC', cursive;
-  // font-style: italic;
   letter-spacing: 2px;
-
   aside {
     font-size: 2rem;
   }
+  // @include trainingwheels;
 }
 
 .topSpanContainer {
-  border-bottom: 2px solid $white;
+  flex-direction: column;
   padding-left: 2rem;
   padding-bottom: .5rem;
   justify-content: flex-start;
@@ -54,13 +53,22 @@
 
 .bottomSpanContainer {
   justify-content: flex-end;
-  padding-right: 2rem;
+  padding-right: 3rem;
 }
+
+.widthLine {
+  transition: 3s;
+  border-bottom: 1px solid $white;
+  width: 0%;
+}
+
 .heightLine {
+  transition: 3s;
   border: 1px solid $white;
   position: absolute;
-  height: 100%;
-  right: 1rem;
+  height: 0%;
+  top: 0;
+  right: 1.2rem;
 }
 
 .ityped-cursor {
