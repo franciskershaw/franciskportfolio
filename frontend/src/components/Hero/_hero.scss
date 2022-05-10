@@ -1,5 +1,4 @@
 .hero {
-  // @include trainingwheels;
   width: 100%;
   display: flex;
   align-items: center;
@@ -12,7 +11,6 @@
   color: $white;
 
   &__heading {
-    // @include trainingwheels;
     padding-left: 3rem;
     padding-right: 3rem;
 
@@ -25,7 +23,6 @@
   }
 
 	&__cta {
-    // @include trainingwheels;
 		height: 15rem;
     display: flex;
     justify-content: center;
@@ -40,13 +37,13 @@
   letter-spacing: 2px;
   aside {
     font-size: 2rem;
+    margin-left: 2rem;
   }
   // @include trainingwheels;
 }
 
 .topSpanContainer {
   flex-direction: column;
-  padding-left: 2rem;
   padding-bottom: .5rem;
   justify-content: flex-start;
 }
@@ -57,13 +54,13 @@
 }
 
 .widthLine {
-  transition: 3s;
+  transition: 2s;
   border-bottom: 1px solid $white;
   width: 0%;
 }
 
 .heightLine {
-  transition: 3s;
+  transition: 2s;
   border: 1px solid $white;
   position: absolute;
   height: 0%;

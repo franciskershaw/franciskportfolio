@@ -14,14 +14,21 @@ const Hero = () => {
       showCursor: true,
       loop: false,
       disableBackTyping: true,
-      strings: [`Hi, my name is Francis.`],
-      typeSpeed: 50,
+      strings: [`Hey there!`],
+      typeSpeed: 100,
+      startDelay: 1000
+      // placeholder: true
     });
   }, []);
 
   useEffect(() => {
-    widthLine.current.style.width = "100%";
-    heightLine.current.style.height = '100%';
+    let timeout = setTimeout(() => {
+      widthLine.current.style.width = "100%";
+      heightLine.current.style.height = '100%';
+    }, 1000)
+    return () => {
+      clearTimeout(timeout)
+    }
   },[])
 
   return (
