@@ -45,14 +45,14 @@ const ProjectCard = (props) => {
         </div>
         <div className="projects__card--buttons">
           <a
-            className='btn btn--link btn--primary'
+            className='btn btn--link btn--secondary'
             href={props.project.liveSite}
             target="_blank"
             rel="noreferrer">
             <FontAwesomeIcon className="btn__icon" icon={faArrowUpRightFromSquare}/> Live site
           </a>
           <a
-            className='btn btn--link btn--primary'
+            className='btn btn--link btn--secondary'
             href={props.project.gitRepo}
             target="_blank"
             rel="noreferrer">

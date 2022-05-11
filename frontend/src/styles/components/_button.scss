@@ -5,7 +5,7 @@
 	padding: 1.5rem;
 	text-decoration: none;
 	border-radius: $borderRadius;
-	transition: all .3s;
+	transition: all .3s ease, border 1ms;
   overflow: hidden;
   z-index: 1;
 	position: relative;
@@ -19,7 +19,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: $darkColor;
     z-index: -2;
   }
   &:before {
@@ -29,12 +28,10 @@
     left: 0;
     width: 0%;
     height: 100%;
-    // background-color: $lightColor;
     transition: all .3s;
     z-index: -1;
   }
   &:hover {
-    // color: $white;
     &:before {
       width: 100%;
     }
@@ -61,14 +58,23 @@
 		}
 		&:hover {
 			color: $darkColor;
-			// border: $buttonBorder solid $darkColor;
+			border: $buttonBorder solid $darkColor;
 		}
 	}
 
 	&--secondary {
-		background: $lightColor;
 		color: $darkColor;
-		// border: $buttonBorder solid $darkColor;
+		border: $buttonBorder solid $darkColor;
+		&:after {
+			background-color: $lightColor;
+		}
+		&:before {
+			background-color: $darkColor;
+		}
+		&:hover {
+			color: $lightColor;
+			border: $buttonBorder solid $lightColor;
+		}
 	}
 
 	&--link {
