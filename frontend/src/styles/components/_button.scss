@@ -1,18 +1,44 @@
 .btn {
 	font-size: 2.5rem;
+	letter-spacing: .15rem;
 	margin: .5rem;
-	padding: 2.5rem;
+	padding: 1.5rem;
 	text-decoration: none;
-	color: $darkColor;
-	border: 1px solid $darkColor;
 	border-radius: $borderRadius;
-	transition: ease-out 0.5s;
-    -webkit-transition: ease-out 0.5s;
-    -moz-transition: ease-out 0.5s;
+	transition: all .3s;
+  overflow: hidden;
+  z-index: 1;
 	position: relative;
 	display: inline-block;
+	text-transform: uppercase;
 
-	
+	&:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: $darkColor;
+    z-index: -2;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    // background-color: $lightColor;
+    transition: all .3s;
+    z-index: -1;
+  }
+  &:hover {
+    // color: $white;
+    &:before {
+      width: 100%;
+    }
+  }
 
 	&--small {
 		font-size: 1.5rem;
@@ -25,15 +51,24 @@
 	}
 
 	&--primary {
-		background: $darkColor;
 		color: $lightColor;
 		border: $buttonBorder solid $lightColor;
+		&:after {
+			background-color: $darkColor;
+		}
+		&:before {
+			background-color: $lightColor;
+		}
+		&:hover {
+			color: $darkColor;
+			// border: $buttonBorder solid $darkColor;
+		}
 	}
 
 	&--secondary {
 		background: $lightColor;
 		color: $darkColor;
-		border: $buttonBorder solid $darkColor;
+		// border: $buttonBorder solid $darkColor;
 	}
 
 	&--link {
@@ -45,42 +80,4 @@
 		font-size: 2rem;
 		margin-right: 5px;
 	}
-
-	// ONE POTENTIAL HOVER EFFECT
-
-	// &::after,
-	// &::before {
-	// 	position: absolute;
-  //   content: "";
-  //   width: 0;
-  //   height: 0;
-  //   transition: .3s;
-	// }
-
-	// &::after {
-	// 	top: -8px;
-  //   left: -8px;
-  //   border-top: 2px solid transparent;
-  //   border-left: 2px solid transparent;
-	// }
-
-	// &::before {
-	// 	bottom: -8px;
-  //   right: -8px;
-  //   border-bottom: 2px solid transparent;
-  //   border-right: 2px solid transparent;
-	// }
-
-	// &:hover {
-	// 	color: $darkColor;
-	// 	background: $lightColor;
-	// 	border: 1px solid $darkColor;
-
-	// 	&::after,
-	// 	&::before {
-	// 		width: 100%;
-  //   	height: 100%;
-  //   	border-color: $darkColor;
-	// 	}
-	// }
 }

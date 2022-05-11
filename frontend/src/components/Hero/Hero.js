@@ -46,10 +46,10 @@ const Hero = () => {
         </h3>
       </div>
       <div className="hero__cta appear-third">
-        <a href="#projects" className="btn btn--secondary">
+        <a href="#projects" className="btn btn--primary">
           Projects
         </a>
-        <a href='#contact' className='btn btn--secondary'>Contact</a>
+        <a href='#contact' className='btn btn--primary'>Contact</a>
       </div>
       <div className="bottomSpanContainer">
         <aside className='appear-first'>Height: {windowDimensions.winHeight}px</aside>
