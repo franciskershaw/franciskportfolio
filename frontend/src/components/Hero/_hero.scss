@@ -16,13 +16,24 @@
   color: $white;
 
   &__heading {
+    // @include trainingwheels;
+    @include respond(tab-port) {
+      margin-left: 4.5rem;
+      margin-right: 4.5rem;
+    }
     padding-left: 3rem;
     padding-right: 3rem;
 
     h1 {
+      @include respond(tab-port) {
+        font-size: 5rem;
+      }
       font-size: 4rem;
     }
     h3 {
+      @include respond(tab-port) {
+        font-size: 2.75rem;
+      }
       font-size: 2.25rem;
     }
   }
@@ -42,6 +53,9 @@
   font-family: 'Amatic SC', cursive;
   letter-spacing: 2px;
   aside {
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
     font-size: 2rem;
     margin-left: 2rem;
   }
@@ -54,6 +68,9 @@
 }
 
 .bottomSpanContainer {
+  @include respond(tab-port) {
+    padding-right: 7rem;
+  }
   justify-content: flex-end;
   padding-right: 3rem;
 }
@@ -65,6 +82,9 @@
 }
 
 .heightLine {
+  @include respond(tab-port) {
+    right: 4.5rem;
+  }
   transition: 2s;
   border: 1px solid $white;
   position: absolute;
