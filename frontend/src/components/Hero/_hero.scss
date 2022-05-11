@@ -21,6 +21,16 @@
       margin-left: 4.5rem;
       margin-right: 4.5rem;
     }
+    @include respond(tab-land) {
+      margin-left: 6.5rem;
+      margin-right: 6.5rem;
+    }
+    @include respond(md-desk) {
+      width: 50%;
+    }
+    @include respond(big-desktop) {
+      width: 40%;
+    }
     padding-left: 3rem;
     padding-right: 3rem;
 
@@ -56,6 +66,9 @@
     @include respond(tab-port) {
       font-size: 3rem;
     }
+    @include respond(md-desk) {
+      margin-left: 5rem;
+    }
     font-size: 2rem;
     margin-left: 2rem;
   }
@@ -71,6 +84,9 @@
   @include respond(tab-port) {
     padding-right: 7rem;
   }
+  @include respond(md-desk) {
+    padding-right: 18rem;
+  }
   justify-content: flex-end;
   padding-right: 3rem;
 }
@@ -84,6 +100,9 @@
 .heightLine {
   @include respond(tab-port) {
     right: 4.5rem;
+  }
+  @include respond(md-desk) {
+    right: 14rem;
   }
   transition: 2s;
   border: 1px solid $white;
