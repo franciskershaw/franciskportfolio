@@ -49,11 +49,26 @@
   }
 
   &__cta {
-    @include trainingwheels;
+    // @include trainingwheels;
     height: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+      @include respond(tab-port) {
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+      @include respond(md-desk) {
+        font-size: 3rem;
+        padding: 2rem;
+      }
+      @include respond(big-desktop) {
+        font-size: 3.5rem;
+        padding: 2.5rem;
+      }
+    }
   }
 }
 
