@@ -40,6 +40,7 @@ body {
 }
 
 .page {
+  border: 1px solid $white;
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
@@ -67,5 +68,6 @@ body {
     padding-right: 1.5rem;
     margin-top: 1.5rem;
     text-shadow: 1px 1px #393939;
+    color: $white;
   }
 }
