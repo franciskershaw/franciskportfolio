@@ -9,6 +9,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
 
   const { windowDimensions } = useContext(AppContext);
+  const winHeight = windowDimensions.winHeight;
 
   const formRef = useRef();
 
@@ -40,10 +41,11 @@ const Contact = () => {
   return (
     <div id="contact" className="page contact">
       <div className="page__heading--container">
-        <h2 className="page__heading">
-          Get in touch!
-        </h2>
-        <p>I'm always keen to take on freelance work, so get in touch an let me know how I might be able to help.</p>
+        <h2 className="page__heading">Get in touch!</h2>
+        <p>
+          I'm always keen to take on freelance work, so get in touch and let me
+          know how I might be able to help.
+        </p>
       </div>
 
       <form className="form" ref={formRef} onSubmit={handleSubmit}>
@@ -77,7 +79,19 @@ const Contact = () => {
             name="message"
             id="message"
             cols="30"
-            rows={windowDimensions.winWidth > 1800 ? '20' : '10'}
+            rows={
+              winHeight < 600
+                ? '3'
+                : winHeight < 700
+                ? '5'
+                : winHeight < 800
+                ? '12'
+                : winHeight < 925
+                ? '18'
+                : winHeight < 1050
+                ? '22'
+                : '30'
+            }
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What's on your mind?"
             className="form__input"
