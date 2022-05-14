@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
+import AppContext from '../../context/AppContext';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -6,6 +7,8 @@ const Contact = () => {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const { windowDimensions } = useContext(AppContext);
 
   const formRef = useRef();
 
@@ -40,6 +43,7 @@ const Contact = () => {
         <h2 className="page__heading">
           Get in touch!
         </h2>
+        <p>I'm always keen to take on freelance work, so get in touch an let me know how I might be able to help.</p>
       </div>
 
       <form className="form" ref={formRef} onSubmit={handleSubmit}>
@@ -73,7 +77,7 @@ const Contact = () => {
             name="message"
             id="message"
             cols="30"
-            rows="10"
+            rows={windowDimensions.winWidth > 1800 ? '20' : '10'}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What's on your mind?"
             className="form__input"
