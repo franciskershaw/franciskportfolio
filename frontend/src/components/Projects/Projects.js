@@ -48,10 +48,6 @@ const Projects = () => {
       <div className="projects__title page__heading--container">
         <h2 className="page__heading">My recent work</h2>
       </div>
-      <div className="swiper__arrows">
-        <button ref={navigationPrevRef}>Left</button>
-        <button ref={navigationNextRef}>Right</button>
-      </div>
       <div className="swiper">
         <Swiper
           pagination={true}
@@ -62,10 +58,10 @@ const Projects = () => {
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
           }}
-         onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = navigationPrevRef.current;
-              swiper.params.navigation.nextEl = navigationNextRef.current;
-         }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
           slidesPerView={slidesPerView}>
           {projects.map((project, index) => (
             <SwiperSlide key={`project-${index}`}>
@@ -74,6 +70,10 @@ const Projects = () => {
           ))}
         </Swiper>
       </div>
+      {/* <div className="swiper__arrows">
+        <button ref={navigationPrevRef}>Left</button>
+        <button ref={navigationNextRef}>Right</button>
+      </div> */}
     </div>
   );
 };

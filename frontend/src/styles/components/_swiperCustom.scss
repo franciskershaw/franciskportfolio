@@ -8,7 +8,10 @@
 
   &__arrows {
     display: flex;
-    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    @include trainingwheels;
   }
 }
 
