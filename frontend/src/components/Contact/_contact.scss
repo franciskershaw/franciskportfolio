@@ -9,13 +9,6 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  h3 {
-    color: $white;
-		font-size: 1.75rem;
-		margin-bottom: 1.5rem;
-		font-weight: 300;
-  }
-
   .form {
     @include respond(tab-port) {
       align-items: center;
@@ -24,24 +17,26 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-		padding-top: 1rem;
+    padding-top: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 3rem;
 
+    h3 {
+			@include respond(tab-port) {
+				font-size: 2rem;
+			}
+			@include respond(md-desk) {
+				font-size: 2.5rem;
+				margin-bottom: 2rem;
+			}
+      color: $white;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
     &__group {
-      @include respond(tab-port) {
-        width: 75%;
-      }
-      @include respond(tab-land) {
-        width: 65%;
-      }
-      @include respond(md-desk) {
-        width: 55%;
-      }
-      @include respond(big-desktop) {
-        width: 45%;
-      }
       margin-bottom: 2rem;
       width: 100%;
 
@@ -54,6 +49,22 @@
           }
           width: 100%;
         }
+      }
+    }
+
+    &__group,
+    h3 {
+      @include respond(tab-port) {
+        width: 75%;
+      }
+      @include respond(tab-land) {
+        width: 65%;
+      }
+      @include respond(md-desk) {
+        width: 55%;
+      }
+      @include respond(big-desktop) {
+        width: 45%;
       }
     }
 
