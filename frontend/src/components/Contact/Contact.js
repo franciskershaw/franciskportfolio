@@ -42,13 +42,13 @@ const Contact = () => {
     <div id="contact" className="page contact">
       <div className="page__heading--container">
         <h2 className="page__heading">Get in touch!</h2>
-        <p>
-          I'm always keen to take on freelance work, so get in touch and let me
-          know how I might be able to help.
-        </p>
       </div>
 
       <form className="form" ref={formRef} onSubmit={handleSubmit}>
+        <h3>
+          I'm always keen to take on freelance work, so get in touch and let me
+          know how I might be able to help.
+        </h3>
         <div className="form__group">
           <input
             value={userName}
