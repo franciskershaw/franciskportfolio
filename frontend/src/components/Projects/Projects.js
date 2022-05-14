@@ -1,8 +1,8 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import ProjectCard from './ProjectCard/ProjectCard';
 import AppContext from '../../context/AppContext';
 
@@ -11,6 +11,9 @@ const Projects = () => {
   const [slidesPerView, setSlidesPerView] = useState(2);
 
   const { windowDimensions } = useContext(AppContext);
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
 
   useEffect(() => {
     const requestOptions = {
@@ -45,12 +48,24 @@ const Projects = () => {
       <div className="projects__title page__heading--container">
         <h2 className="page__heading">My recent work</h2>
       </div>
+      <div className="swiper__arrows">
+        <button ref={navigationPrevRef}>Left</button>
+        <button ref={navigationNextRef}>Right</button>
+      </div>
       <div className="swiper">
         <Swiper
           pagination={true}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           className="mySwiper"
           scrollbar={{ dragable: true }}
+          navigation={{
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
+          }}
+         onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              swiper.params.navigation.nextEl = navigationNextRef.current;
+         }}
           slidesPerView={slidesPerView}>
           {projects.map((project, index) => (
             <SwiperSlide key={`project-${index}`}>
