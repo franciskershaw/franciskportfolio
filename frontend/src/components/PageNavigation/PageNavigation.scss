@@ -1,0 +1,17 @@
+.PageNavigation {
+  position: fixed;
+  bottom: 15px;
+  z-index: 100;
+  left: 15px;
+
+	button {
+		cursor: pointer;
+		font-size: 150%;
+		background-color: $darkColor;
+		border: none;
+		margin-right: 15px;
+		color: $white;
+		padding: 1rem;
+		border-radius: 4px;
+	}
+}
