@@ -1,3 +1,16 @@
 .projects {
-	position: relative;
+  position: relative;
+  background-image: linear-gradient(
+      to right top,
+      rgba($primaryColor, 0.9),
+      rgba($darkColor, 0.9)
+    ),
+    url('../../assets/hero-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    color: $white;
+  }
 }
