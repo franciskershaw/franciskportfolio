@@ -43,7 +43,6 @@ const Contact = () => {
       <div className="page__heading--container">
         <h2 className="page__heading">Get in touch!</h2>
       </div>
-
       <form className="form" ref={formRef} onSubmit={handleSubmit}>
         <h3>
           I'm always keen to take on freelance work, so get in touch and let me
@@ -85,12 +84,10 @@ const Contact = () => {
                 : winHeight < 700
                 ? '5'
                 : winHeight < 800
-                ? '12'
+                ? '10'
                 : winHeight < 925
                 ? '18'
-                : winHeight < 1050
-                ? '22'
-                : '30'
+                : '22'
             }
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What's on your mind?"
