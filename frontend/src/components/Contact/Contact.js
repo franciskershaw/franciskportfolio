@@ -79,15 +79,9 @@ const Contact = () => {
             id="message"
             cols="30"
             rows={
-              winHeight < 600
+              winHeight < 650
                 ? '3'
-                : winHeight < 700
-                ? '5'
-                : winHeight < 800
-                ? '10'
-                : winHeight < 925
-                ? '18'
-                : '22'
+                : '7'
             }
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What's on your mind?"
