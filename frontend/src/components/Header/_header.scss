@@ -34,8 +34,14 @@
         align-items: center;
 
         .socialIcon {
+          color: $darkColor;
           font-size: calc($default-font-size * 1.5);
           margin-right: 2rem;
+          transition: .2s;
+
+          &:hover {
+            transform:scale(1.1);
+          }
         }
       }
     }
@@ -55,6 +61,21 @@
           background-color: $darkColor;
           transform-origin: left;
           transition: all 1s ease;
+        }
+      }
+    }
+
+    // Larger screen size navlinks
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+        margin-right: 3rem;
+        font-weight: 600;
+        
+        a {
+          text-decoration: none;
+          color: $darkColor;
         }
       }
     }
