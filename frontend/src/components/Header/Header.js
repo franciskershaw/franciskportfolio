@@ -1,7 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useContext } from 'react';
+import AppContext from '../../context/AppContext';
 
 const Header = (props) => {
+  const { windowDimensions } = useContext(AppContext);
+  const winWidth = windowDimensions.winWidth;
+      
   return (
     <header className={`header ${props.menuOpen && 'header--active'}`}>
       <div className="header__wrapper">
