@@ -26,9 +26,6 @@ const Header = (props) => {
         {winWidth > 767 ? (
           <ul>
             <li>
-              <a href="#hero">Home</a>
-            </li>
-            <li>
               <a href="#projects">Projects</a>
             </li>
             <li>
