@@ -1,25 +1,7 @@
 import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 
 const PageHeading = (props) => {
   const { ref, inView } = useInView();
-  const [style, setStyle] = useState({
-    width: 100,
-  });
-
-  // useEffect(() => {
-  // 	if (inView) {
-  // 		setStyle({
-  // 			width: '100%'
-  // 		})
-  // 	}
-  // 	if (!inView) {
-  // 		setStyle({
-  // 			width: 0
-  // 		})
-  // 	}
-  // }, [inView]);
 
   return (
     <>
