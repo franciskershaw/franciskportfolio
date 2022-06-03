@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Navigation } from 'swiper';
+import PageHeading from '../PageHeading/PageHeading';
 import ProjectCard from './ProjectCard/ProjectCard';
 import AppContext from '../../context/AppContext';
 
@@ -46,7 +47,7 @@ const Projects = () => {
   return (
     <div id="projects" className="page projects">
       <div className="projects__title page__heading--container">
-        <h2 className="page__heading">My recent work</h2>
+        <PageHeading text='My recent work' section='projects'/>
       </div>
       <div className="swiper">
         <Swiper

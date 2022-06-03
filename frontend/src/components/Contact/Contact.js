@@ -1,6 +1,7 @@
 import { useRef, useState, useContext } from 'react';
 import AppContext from '../../context/AppContext';
 import emailjs from '@emailjs/browser';
+import PageHeading from '../PageHeading/PageHeading';
 
 const Contact = () => {
   const [thankYou, setThankYou] = useState(false);
@@ -41,7 +42,7 @@ const Contact = () => {
   return (
     <div id="contact" className="page contact">
       <div className="page__heading--container">
-        <h2 className="page__heading">Get in touch!</h2>
+        <PageHeading text='Get in touch!' section='contact' />
       </div>
       <form className="form" ref={formRef} onSubmit={handleSubmit}>
         <h3>
