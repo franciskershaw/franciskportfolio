@@ -15,10 +15,16 @@ const Header = (props) => {
             {`<FrancisKershaw />`}
           </a>
           <div className="iconContainer">
-            <a href="https://www.linkedin.com/in/francis-kershaw/">
+            <a
+              href="https://www.linkedin.com/in/francis-kershaw/"
+              target="_blank"
+              rel="noreferrer">
               <FontAwesomeIcon className="socialIcon" icon={faLinkedin} />
             </a>
-            <a href="https://github.com/franciskershaw">
+            <a
+              href="https://github.com/franciskershaw"
+              target="_blank"
+              rel="noreferrer">
               <FontAwesomeIcon className="socialIcon" icon={faGithub} />
             </a>
           </div>

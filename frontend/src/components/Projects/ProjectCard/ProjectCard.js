@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import ReactTooltip from 'react-tooltip';
 
 const ProjectCard = (props) => {
   const [skills, setSkills] = useState([]);
@@ -23,6 +24,10 @@ const ProjectCard = (props) => {
     }
   }, [props.project.skills]);
 
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
+
   const style = {
     borderTop: `thick solid ${props.project.backgroundColor}`,
   };
@@ -36,23 +41,31 @@ const ProjectCard = (props) => {
         </div>
         <div className="projects__card--skills">
           {skills.map((skill, index) => (
-            <img
-              alt={`${skill.name} logo`}
-              className="skill__icon"
-              src={require(`../../../assets/${skill.iconLink}`)}
-              key={`${props.project.title}_skill_${index}`}></img>
+            <div key={`${props.project.title}_skill_${index}`}>
+              <img
+                alt={`${skill.name} logo`}
+                className="skill__icon"
+                src={require(`../../../assets/${skill.iconLink}`)}
+                data-for={skill.name}
+                data-tip={skill.name}></img>
+              <ReactTooltip id={skill.name} />
+            </div>
           ))}
         </div>
         <div className="projects__card--buttons">
           <a
-            className='btn btn--link btn--secondary'
+            className="btn btn--link btn--secondary"
             href={props.project.liveSite}
             target="_blank"
             rel="noreferrer">
-            <FontAwesomeIcon className="btn__icon" icon={faArrowUpRightFromSquare}/> Live site
+            <FontAwesomeIcon
+              className="btn__icon"
+              icon={faArrowUpRightFromSquare}
+            />{' '}
+            Live site
           </a>
           <a
-            className='btn btn--link btn--secondary'
+            className="btn btn--link btn--secondary"
             href={props.project.gitRepo}
             target="_blank"
             rel="noreferrer">
