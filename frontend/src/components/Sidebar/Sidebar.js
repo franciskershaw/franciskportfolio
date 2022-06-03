@@ -9,7 +9,7 @@ const Sidebar = (props) => {
     if (winWidth > 767 && props.menuOpen) {
       props.setMenuOpen(false);
     }
-  }, [winWidth]);
+  }, [winWidth, props]);
 
   return (
     <div className={`sidebar ${props.menuOpen && 'sidebar--active'}`}>
