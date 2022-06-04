@@ -9,11 +9,13 @@ cloudinary.config({
 
 const storage = new CloudinaryStorage({
   cloudinary,
-  folder: 'Portfolio',
-  allowedFormats: ['jpeg', 'jpg', 'png', 'svg'],
+  params: {
+    folder: 'Portfolio',
+    allowedFormats: ['jpeg', 'jpg', 'png', 'svg'],
+  },
 });
 
 module.exports = {
-	cloudinary,
-	storage
-}
+  cloudinary,
+  storage,
+};
