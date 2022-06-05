@@ -5,6 +5,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import ReactTooltip from 'react-tooltip';
 
 const ProjectCard = (props) => {
+  console.log(props.project)
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const ProjectCard = (props) => {
               <img
                 alt={`${skill.name} logo`}
                 className="skill__icon"
-                src={require(`../../../assets/${skill.iconLink}`)}
+                src={skill.icon.url}
                 data-for={skill.name}
                 data-tip={skill.name}></img>
               <ReactTooltip id={skill.name} />
@@ -72,14 +73,14 @@ const ProjectCard = (props) => {
             <FontAwesomeIcon className="btn__icon " icon={faGithub} /> GitHub
           </a>
         </div>
-        {props.project.screenShotOne && (
+        {props.project.screenShot && (
           <div className="projects__card--image">
             <picture>
               <source
-                srcSet={require(`../../../assets/${props.project.screenShotOne}_multidevice.png`)}
+                srcSet={props.project.screenShot.url}
               />
               <img
-                src={require(`../../../assets/${props.project.screenShotOne}_multidevice.png`)}
+                src={props.project.screenShot.url}
                 alt="Project on multiple devices"
               />
             </picture>
