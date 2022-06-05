@@ -1,6 +1,9 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
+const multer = require('multer');
+const { storage } = require('../config/cloudinary');
+const upload = multer({ storage });
 
 const { protectRoute } = require('../middleware/authMiddleware');
 
@@ -27,9 +30,14 @@ router.get('/:id', asyncHandler(async (req, res) => {
 }))
 
 // Post skills
-router.post('/', protectRoute, asyncHandler(async (req, res) => {
+router.post('/', protectRoute, upload.single('icon'), asyncHandler(async (req, res) => {
 	try {
-		const skill = await Skill.create(req.body);
+		const skill = new Skill(req.body);
+		skill.icon = {
+			url: req.file.path, 
+			filename: req.file.filename
+		}
+		await skill.save()
 		res.status(201).json(skill)
 	} catch (err) {
 		console.log(err)
@@ -37,7 +45,7 @@ router.post('/', protectRoute, asyncHandler(async (req, res) => {
 }))
 
 // Edit a specific skill
-router.put('/:id', protectRoute, asyncHandler(async(req, res) => {
+router.put('/:id', protectRoute, upload.single('icon'), asyncHandler(async(req, res) => {
 	try {
 		const skill = await Skill.findById(req.params.id)
 
@@ -51,6 +59,11 @@ router.put('/:id', protectRoute, asyncHandler(async(req, res) => {
 			req.body,
 			{ new: true }
 		)
+		updatedSkill.icon = {
+			url: req.file.path,
+			filename: req.file.filename
+		}
+		await updatedSkill.save()
 		
 		res.status(200).json(updatedSkill)
 
