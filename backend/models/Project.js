@@ -17,10 +17,6 @@ const ProjectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    brief: {
-        type: String,
-        required: true
-    },
     backgroundColor: {
         type: String,
         required: true
@@ -29,11 +25,9 @@ const ProjectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    screenShotOne: {
-        type: String
-    },
-    screenShotTwo: {
-        type: String
+    screenShot: {
+        url: String,
+        filename: String,
     },
     skills: [
         {
