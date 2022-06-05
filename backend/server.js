@@ -3,9 +3,6 @@ const dotenv = require('dotenv').config();
 const path = require('path');
 const connectDB = require('./config/db');
 const colors = require('colors');
-const multer = require('multer');
-const { storage } = require('./config/cloudinary');
-const upload = multer({ storage });
 // Grab port info from config
 const PORT = process.env.PORT || 5000;
 

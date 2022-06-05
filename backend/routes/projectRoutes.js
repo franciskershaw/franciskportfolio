@@ -1,6 +1,9 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
 const router = express.Router();
+const multer = require('multer');
+const {storage} = require('../config/cloudinary');
+const upload = multer({ storage });
 
 const { protectRoute } = require('../middleware/authMiddleware');
 
@@ -49,6 +52,11 @@ router.put('/:id', protectRoute, asyncHandler(async (req, res) => {
 	}
 	
 }))
+
+// TEMP upload an image
+router.post('/upload', upload.single('image'), (req, res) => {
+	res.send(req.file);
+})
 
 // Delete a project
 
