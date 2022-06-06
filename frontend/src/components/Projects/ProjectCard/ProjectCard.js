@@ -5,7 +5,6 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import ReactTooltip from 'react-tooltip';
 
 const ProjectCard = (props) => {
-  console.log(props.project)
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
