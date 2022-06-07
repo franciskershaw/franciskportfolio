@@ -12,10 +12,11 @@ const Project = require('../models/Project');
 // Get all projects
 router.get('/', asyncHandler(async (req, res) => {
 	try {
-		const projects = await Project.find();
+		const projects = await Project.find().sort( { _id: -1} );
 		res.status(200).json(projects);
 	} catch (err) {
 		console.log(err);
+		throw new Error(err)
 	}
 }));
 
