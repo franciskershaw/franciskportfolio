@@ -1,8 +1,10 @@
-# FrancisK - Portfolio
+# Francis Kershaw - Dev Portfolio
+
+![heroimage](https://res.cloudinary.com/dqdjr1d4f/image/upload/v1654879900/Portfolio/ihgdlgy0qt11i9exqjrn.png)
 
 This project is designed to showcase all of the work I produced while retraining on my Code Institute diploma, as well as any future personal applications I decide to work on. It uses a custom Express and MongoDB backend so that the building blocks are in place for version 2 to have complete CRUD (create, read, update, delete) capability so that I'll be able to manage all projects and skills from the frontend. I chose to make this my first React JS (and therefore a MERN stack) project as a means to practice skills learnt in my day job.
 
-You can find the link the repository [here](https://github.com/franciskershaw/franciskportfolio), and the live website for version one will be available soon.
+You can find the link the repository [here](https://github.com/franciskershaw/franciskportfolio), and the live website can be viewed [here](https://www.franciskershaw.com/)
 
 ## Table of Contents
 
@@ -77,6 +79,10 @@ The project has already gone through several iterations, having been most recent
 
 ## Skeleton plane
 
+![mainwireframe](https://res.cloudinary.com/dqdjr1d4f/image/upload/v1655021189/Portfolio/portfolio-main-wireframe_qiywnj.png)
+
+![crudwireframe](https://res.cloudinary.com/dqdjr1d4f/image/upload/v1655021189/Portfolio/porftolio-crud-wireframe_sr2fmv.png)
+
 ## Surface plane
 
 ### Colour scheme:
@@ -86,13 +92,22 @@ Still deciding this
 * Quicksand
 * Dosis
 
-## Data model
-
 ## Technologies used
 * React as a the frontend framework
 * SCSS for styling
 * Express / Node.JS to handle the backend logic
 * MongoDB / Mongoose to handle and store data
-* EmailJs library to send emails from the frontend
+* Digital Ocean for cloud hosting
+* Cloudinary for image hosting
+
+## Notes for version 2
+
+The first version of this stie that has been pushed live in June 2022 is the bare minimum viable product I deemed acceptable for deployment. However I will be scaling up the project exponentionally as time goes on, and future versions will include the following:
+
+* Adding, editting, deleting, reordering projects from the frontend.
+
+* An about section, directly beneath the hero section, which will give a bio of me and the services I offer.
+
+* Individual project pages/routes which you can view to 'find out more'
 
 
