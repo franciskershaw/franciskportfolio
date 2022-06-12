@@ -10,20 +10,13 @@ You can find the link the repository [here](https://github.com/franciskershaw/fr
 
 * [Notes pre development](#notes-pre-development)
 * [User Stories](#user-stories)
-* [Scope Plane](#scope-plane)
-* [Structure Plane](#structure-plane)
-* [Skeleton Plane](#skeleton-plane)
-* [Surface Plane](#surface-plane)
-    * [Keywords](#keywords)
-    * [Colour Scheme](#colour-scheme)
-    * [Typography](#typography)
-* [Data Model](#data-model)
-* [Features](#features)
-    * [Existing Features](#existing-features)
-    * [Defensive design features](#defensive-design-features)
-* [Languages and frameworks](#languages-and-frameworks)
-* [Testing](#testing)
-* [Deployment](#deployment)
+* [UX Design](#ux-design)
+    * [Scope Plane](#scope-plane)
+    * [Structure Plane](#structure-plane)
+    * [Skeleton Plane](#skeleton-plane)
+    * [Surface Plane](#surface-plane)
+* [Technologies Used](#technologies-used)
+* [Version 2 notes](#notes-for-version-2)
 
 
 ## Notes pre development
@@ -46,7 +39,9 @@ The project has already gone through several iterations, having been most recent
 5. I want to be able to download their full CV so that I can see an official breakdown of their previous work history.
 6. I would like to navigate to the site owner’s social accounts (like LinkedIn or Github).
 
-## Scope plane
+## UX Design
+
+### Scope plane
 
 ### Required functional specifications
 * A picture of me
@@ -64,7 +59,7 @@ The project has already gone through several iterations, having been most recent
 * Blog
 * Complete crud functionality
 
-## Structure plane
+### Structure plane
 
 * Most of the site is going to fit onto one page, with a fixed navigation bar that directs you to the correct part of the page.
 * Start with a picture of me and a short description of what I do, followed by a call to action to ‘get in touch’ or ‘view projects’ which are the two most important things I want to get out of this site.
@@ -77,18 +72,18 @@ The project has already gone through several iterations, having been most recent
 * The navigation bar will have my name on the top left, the main navigation elements in the middle, and social links + CV on the right
 * The footer will have the same content as the navigation bar
 
-## Skeleton plane
+### Skeleton plane
 
 ![mainwireframe](https://res.cloudinary.com/dqdjr1d4f/image/upload/v1655021189/Portfolio/portfolio-main-wireframe_qiywnj.png)
 
 ![crudwireframe](https://res.cloudinary.com/dqdjr1d4f/image/upload/v1655021189/Portfolio/porftolio-crud-wireframe_sr2fmv.png)
 
-## Surface plane
+### Surface plane
 
-### Colour scheme:
+#### Colour scheme:
 Still deciding this
 
-### Typography
+#### Typography
 * Quicksand
 * Dosis
 
